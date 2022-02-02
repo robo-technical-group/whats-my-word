@@ -217,7 +217,7 @@ const WORDS: string[] = [
     "MORAL",
     "WALLS",
     "TOUCH",
-    "JAMES",
+    "TOWEL",
     "STEPS",
     "OFFER",
     "HOUSE",
