@@ -1,4 +1,4 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.7.24/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"1.1.1","target":"arcade","targetVersion":"1.7.24","repo":"robo-technical-group/whats-my-word"}
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.7.24/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"1.1.2","target":"arcade","targetVersion":"1.7.24","repo":"robo-technical-group/whats-my-word"}
 // total=1837238 new=12.26% cached=82.50% other=5.24%
 (function (ectx) {
 'use strict';
@@ -532,7 +532,7 @@ const pxsim_pxtrt = pxsim.pxtrt;
 const pxsim_numops = pxsim.numops;
 
 
-function _main___P114569(s) {
+function _main___P118245(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -3208,13 +3208,13 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-_main___P114569.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"pxt_modules/arcade-text/main.ts","functionName":"<main>","argumentNames":[]}
-_main___P114569.continuations = [  ]
+_main___P118245.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"pxt_modules/arcade-text/main.ts","functionName":"<main>","argumentNames":[]}
+_main___P118245.continuations = [  ]
 
-function _main___P114569_mk(s) {
+function _main___P118245_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: _main___P114569, depth: s.depth + 1,
+        parent: s, fn: _main___P118245, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -32658,8 +32658,8 @@ switch (step) {
   case 0:
 
     s.word___113779 = undefined;
-    s.unnamed1644___U1 = undefined;
-    s.unnamed1645___U2 = undefined;
+    s.unnamed1916___U1 = undefined;
+    s.unnamed1917___U2 = undefined;
     s.tmp_0 = helpers_stringToUpperCase__P46985_mk(s);
     s.tmp_0.arg0 = globals.guessWord___113630;
     s.callLocIdx = 89; s.pc = 6; return s.tmp_0;
@@ -32667,15 +32667,15 @@ switch (step) {
     r0 = s.retval;
     globals.guessWord___113630 = (r0);
     s.word___113779 = (undefined);
-    s.unnamed1644___U1 = (globals.WORDS___50932);
-    s.unnamed1645___U2 = (0);
+    s.unnamed1916___U1 = (globals.WORDS___50932);
+    s.unnamed1917___U2 = (0);
   case 1:
-    s.tmp_0 = r0 = s.unnamed1645___U2;
-    r0 = pxsim_Array__length(s.unnamed1644___U1);
+    s.tmp_0 = r0 = s.unnamed1917___U2;
+    r0 = pxsim_Array__length(s.unnamed1916___U1);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 4; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed1644___U1, s.unnamed1645___U2);
+    r0 = pxsim_Array__getAt(s.unnamed1916___U1, s.unnamed1917___U2);
     s.word___113779 = (r0);
     r0 = (globals.guessWord___113630 == s.word___113779);
     s.tmp_2 = r0;
@@ -32685,11 +32685,11 @@ switch (step) {
     { step = 5; continue; }
   case 2:
   case 3:
-    r0 = (s.unnamed1645___U2 + 1);
-    s.unnamed1645___U2 = (r0);
+    r0 = (s.unnamed1917___U2 + 1);
+    s.unnamed1917___U2 = (r0);
     { step = 1; continue; }
   case 4:
-    s.unnamed1644___U1 = (undefined);
+    s.unnamed1916___U1 = (undefined);
     r0 = false;
   case 5:
     return leave(s, r0)
@@ -32706,8 +32706,8 @@ function findGuess__P113774_mk(s) {
   tmp_1: undefined,
   tmp_2: undefined,
   word___113779: undefined,
-  unnamed1644___U1: undefined,
-  unnamed1645___U2: undefined,
+  unnamed1916___U1: undefined,
+  unnamed1917___U2: undefined,
 } }
 
 
@@ -34241,8 +34241,8 @@ switch (step) {
   case 0:
 
     s.oldsprite___114035 = undefined;
-    s.unnamed1646___U1 = undefined;
-    s.unnamed1647___U2 = undefined;
+    s.unnamed1918___U1 = undefined;
+    s.unnamed1919___U2 = undefined;
     s.titleSprite___114043 = undefined;
     s.y___114086 = undefined;
     s.x___114087 = undefined;
@@ -34260,15 +34260,15 @@ switch (step) {
     s.callLocIdx = 110; s.pc = 13; return s.tmp_0;
   case 13:
     r0 = s.retval;
-    s.unnamed1646___U1 = (r0);
-    s.unnamed1647___U2 = (0);
+    s.unnamed1918___U1 = (r0);
+    s.unnamed1919___U2 = (0);
   case 1:
-    s.tmp_0 = r0 = s.unnamed1647___U2;
-    r0 = pxsim_Array__length(s.unnamed1646___U1);
+    s.tmp_0 = r0 = s.unnamed1919___U2;
+    r0 = pxsim_Array__length(s.unnamed1918___U1);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 2; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed1646___U1, s.unnamed1647___U2);
+    r0 = pxsim_Array__getAt(s.unnamed1918___U1, s.unnamed1919___U2);
     s.oldsprite___114035 = (r0);
     s.tmp_2 = Sprite_destroy__P49031_mk(s);
     s.tmp_2.arg0 = s.oldsprite___114035;
@@ -34277,11 +34277,11 @@ switch (step) {
     s.callLocIdx = 111; s.pc = 14; return s.tmp_2;
   case 14:
     r0 = s.retval;
-    r0 = (s.unnamed1647___U2 + 1);
-    s.unnamed1647___U2 = (r0);
+    r0 = (s.unnamed1919___U2 + 1);
+    s.unnamed1919___U2 = (r0);
     { step = 1; continue; }
   case 2:
-    s.unnamed1646___U1 = (undefined);
+    s.unnamed1918___U1 = (undefined);
     r0 = pxsim_pxtcore_mkClassInstance(TextSprite__C50713_VT);
     s.tmp_0 = r0;
     s.tmp_1 = TextSprite_constructor__P50714_mk(s);
@@ -34655,8 +34655,8 @@ function setupBoard__P113673_mk(s) {
   tmp_2: undefined,
   tmp_3: undefined,
   oldsprite___114035: undefined,
-  unnamed1646___U1: undefined,
-  unnamed1647___U2: undefined,
+  unnamed1918___U1: undefined,
+  unnamed1919___U2: undefined,
   titleSprite___114043: undefined,
   y___114086: undefined,
   x___114087: undefined,
@@ -60691,5 +60691,5 @@ const sprites_BaseSpriteSayRenderer__C48893_VT = mkVTable({
 
 const breakpoints = setupDebugger(1, ["gameMode___113625","splashScreen___113643","nextReveal___113637","giveUpSprite___113627","promptSprite___113641","currGuess___113620","guessWord___113630","guessMatches___113629","numMatches___113639","lastRevealed___113633","theWord___113600","WORDS___50932","gameBoard___113621","letterBoard___113634","TEXT_TITLES___113617","TEXT_HEADLINES___113609","TEXT_ACTIONS___113614"])
 
-return _main___P114569
+return _main___P118245
 })
