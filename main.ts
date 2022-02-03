@@ -50,7 +50,7 @@ enum GuessStatus {
  * Constants
  */
 const MAX_GUESSES: number = 6
-const REVEAL_DELAY: number = 375
+const REVEAL_DELAY: number = 500
 const TEXT_HEADLINES: string[][] = [
     ['MakeCode Arcade port of', 'Wordle by Josh Wardle'],
     ['Programmed in', 'MakeCode Arcade'],
