@@ -49,7 +49,7 @@ enum GuessStatus {
  * Constants
  */
 const MAX_GUESSES: number = 6
-const REVEAL_DELAY: number = 100
+const REVEAL_DELAY: number = 375
 const TEXT_HEADLINES: string[][] = [
     ['MakeCode Arcade port of', 'Wordle by Josh Wardle'],
     ['Programmed in', 'MakeCode Arcade'],
@@ -289,12 +289,14 @@ function revealNext(): void {
         let charIndex: number = guessWord.charCodeAt(lastRevealed) - "A".charCodeAt(0)
         let letterBoardSprite: TextSprite = letterBoard[charIndex]
         if (guessMatches.matches[lastRevealed] == Status.Match) {
+            music.baDing.play()
             letterSprite.bg = Color.BrightGreen
             letterSprite.fg = Color.White
             letterBoardSprite.bg = Color.BrightGreen
             letterBoardSprite.fg = Color.White
             numMatches++
         } else if (guessMatches.matches[lastRevealed] == Status.WrongPlace) {
+            music.smallCrash.play()
             letterSprite.bg = Color.Yellow
             letterSprite.fg = Color.Black
             if (letterBoardSprite.bg == 0) {
@@ -302,9 +304,12 @@ function revealNext(): void {
                 letterBoardSprite.fg = Color.Black
             }
         } else {
+            music.knock.play()
             letterSprite.bg = Color.Black
             letterSprite.fg = Color.White
-            letterBoardSprite.text = ""
+            if (letterBoardSprite.bg == 0) {
+                letterBoardSprite.text = ""
+            }
         }
         letterSprite.update()
         letterBoardSprite.update()
