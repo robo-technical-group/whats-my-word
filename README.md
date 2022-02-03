@@ -1,21 +1,18 @@
-> Open this page at [https://robo-technical-group.github.io/javacript-template/](https://robo-technical-group.github.io/javacript-template/)
+> Open this page at [https://robo-technical-group.github.io/whats-my-word/](https://robo-technical-group.github.io/whats-my-word/)
 
-## Use this extension
+# What's My Word?
 
-This repository can be added as an **extension** in MakeCode.
+a.k.a. MakeCode Arcade port of Josh Wardle's *Wordle*.
 
-* open [https://arcade.makecode.com/](https://arcade.makecode.com/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/robo-technical-group/javacript-template** and import
+[https://www.powerlanguage.co.uk/wordle/](https://www.powerlanguage.co.uk/wordle/)
 
-## Edit this extension ![Build status badge](https://github.com/robo-technical-group/javacript-template/workflows/MakeCode/badge.svg)
+## Edit this extension ![Build status badge](https://github.com/robo-technical-group/whats-my-word/workflows/MakeCode/badge.svg)
 
 To edit this repository in MakeCode.
 
 * open [https://arcade.makecode.com/](https://arcade.makecode.com/)
 * click on **Import** then click on **Import URL**
-* paste **https://github.com/robo-technical-group/javacript-template** and click import
+* paste **https://github.com/robo-technical-group/whats-my-word** and click import
 
 #### Metadata (used for search, rendering)
 
