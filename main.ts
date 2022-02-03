@@ -3,7 +3,7 @@
  * a.k.a. Wordle for MakeCode Arcade
  * Built on
  * MakeCode Arcade JavaScript Template v. 2.2.2
- * Last update: 26 Aug 2020 ak
+ * Template last update: 26 Aug 2020 ak
  */
 
 /**
