@@ -1,6 +1,7 @@
 /**
  * What's My Word?
  * a.k.a. Wordle for MakeCode Arcade
+ * https://www.powerlanguage.co.uk/wordle/
  * Built on
  * MakeCode Arcade JavaScript Template v. 2.2.2
  * Template last update: 26 Aug 2020 ak
