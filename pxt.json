@@ -10,7 +10,8 @@
     "files": [
         "main.ts",
         "README.md",
-        "words.ts"
+        "words.ts",
+        "guess.ts"
     ],
     "testFiles": [
         "test.ts"

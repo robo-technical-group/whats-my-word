@@ -70,6 +70,7 @@ let currGuess: number = 0
 let gameBoard: TextSprite[][] = []
 let gameMode: GameMode = GameMode.NotReady
 let giveUpSprite: TextSprite = null
+let guessMatches: Guess = null
 let guessWord: string = ""
 let lastRevealed: number = -1
 let letterBoard: TextSprite[] = []
@@ -208,10 +209,6 @@ function buildSplashScreen(): void {
         TEXT_ACTIONS, Color.LightBlue)
 }
 
-function doesLetterMatch(guess: string, master: string, loc: number): boolean {
-    return (master.charAt(loc) == guess.charAt(loc))
-}
-
 function findGuess(): boolean {
     // Linear search because WORDS is unsorted. :-(
     guessWord = guessWord.toUpperCase()
@@ -253,20 +250,12 @@ function getGuess(): void {
     if (reset) {
         resetGuess()
     } else {
+        guessMatches = new Guess(guessWord)
         numMatches = 0
         nextReveal = game.runtime()
         lastRevealed = -1
         gameMode = GameMode.ShowGuess
     }
-}
-
-function isLetterFound(needle: string, haystack: string): boolean {
-    for (let i: number = 0; i < haystack.length; i++) {
-        if (haystack.charAt(i) == needle) {
-            return true
-        }
-    }
-    return false
 }
 
 function resetBoard(): void {
@@ -299,13 +288,13 @@ function revealNext(): void {
         letterSprite.text = guessWord.charAt(lastRevealed)
         let charIndex: number = guessWord.charCodeAt(lastRevealed) - "A".charCodeAt(0)
         let letterBoardSprite: TextSprite = letterBoard[charIndex]
-        if (doesLetterMatch(guessWord, theWord, lastRevealed)) {
+        if (guessMatches.matches[lastRevealed] == Status.Match) {
             letterSprite.bg = Color.BrightGreen
             letterSprite.fg = Color.White
             letterBoardSprite.bg = Color.BrightGreen
             letterBoardSprite.fg = Color.White
             numMatches++
-        } else if (isLetterFound(guessWord.charAt(lastRevealed), theWord)) {
+        } else if (guessMatches.matches[lastRevealed] == Status.WrongPlace) {
             letterSprite.bg = Color.Yellow
             letterSprite.fg = Color.Black
             if (letterBoardSprite.bg == 0) {
