@@ -48,6 +48,7 @@ enum GuessStatus {
 
 interface Stats {
     wins: number,
+    streak: number,
     games: number,
     guesses: number[]
 }
@@ -229,9 +230,12 @@ function endGame(win: boolean) {
     stats.games++
     if (win) {
         stats.wins++
+        stats.streak++
         game.splash(theWord + "!", "Got it in " + (currGuess + 1) +
             (currGuess == 0 ? " guess!!" : " guesses!"))
         stats.guesses[currGuess]++
+    } else {
+        stats.streak = 0
     }
 
     saveStats()
@@ -257,6 +261,7 @@ function findGuess(): boolean {
 function loadStats(): void {
     stats = {
         wins: settings.exists("saved") ? settings.readNumber("wins") : 0,
+        streak: settings.exists("saved") ? settings.readNumber("streak") : 0,
         games: settings.exists("saved") ? settings.readNumber("games") : 0,
         guesses: settings.exists("saved") ? settings.readNumberArray("guesses")
             : [0, 0, 0, 0, 0, 0]
@@ -360,21 +365,23 @@ function revealNext(): void {
     } 
 }
 
-function revealWord(): void {
-    game.splash("[Whispers] The password is " + theWord + ".")
-    endGame(false)
-}
-
 function resetStats(): void {
     stats.wins = 0
+    stats.streak = 0
     stats.games = 0
     stats.guesses = [0, 0, 0, 0, 0, 0]
     saveStats()
 }
 
+function revealWord(): void {
+    game.splash("[Whispers] The password is " + theWord + ".")
+    endGame(false)
+}
+
 function saveStats(): void {
     settings.writeNumber("saved", 1)
     settings.writeNumber("wins", stats.wins)
+    settings.writeNumber("streak", stats.streak)
     settings.writeNumber("games", stats.games)
     settings.writeNumberArray("guesses", stats.guesses)
 }
@@ -465,6 +472,7 @@ function setupBoard(): void {
 function showStats(): void {
     let message: string =
         "Wins: " + stats.wins + "\n"
+        + "Win streak: " + stats.streak + "\n"
         + "Games: " + stats.games + "\n"
     if (stats.games > 0) {
         message +=
