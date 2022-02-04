@@ -12,7 +12,15 @@
         "main.ts",
         "README.md",
         "words.ts",
-        "guess.ts"
+        "guess.ts",
+        "attract.ts",
+        "controller.ts",
+        "enums.ts",
+        "images.g.jres",
+        "images.g.ts",
+        "stats.ts",
+        "board.ts",
+        "game.ts"
     ],
     "testFiles": [
         "test.ts"
