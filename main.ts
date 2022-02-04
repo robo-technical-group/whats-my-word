@@ -209,7 +209,7 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     }   // switch (gameMode)
 })  // controller.up.onEvent()
 
-controller.combos.attachCombo("ududlrlrba", function() {
+controller.combos.attachCombo("uuddlrlrba", function() {
     showStats()
     if (game.ask("Reset stats?")) {
         resetStats()
