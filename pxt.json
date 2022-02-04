@@ -5,7 +5,8 @@
     "dependencies": {
         "device": "*",
         "pxt-arcade-info-screens": "github:robo-technical-group/pxt-arcade-info-screens#v1.0.13",
-        "arcade-text": "github:microsoft/arcade-text#v1.3.0"
+        "arcade-text": "github:microsoft/arcade-text#v1.3.0",
+        "pxt-button-combos": "github:jwunderl/pxt-button-combos#v0.0.24"
     },
     "files": [
         "main.ts",

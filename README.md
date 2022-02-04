@@ -6,7 +6,13 @@ a.k.a. MakeCode Arcade port of Josh Wardle's *Wordle*.
 
 [https://www.powerlanguage.co.uk/wordle/](https://www.powerlanguage.co.uk/wordle/)
 
-## Edit this extension ![Build status badge](https://github.com/robo-technical-group/whats-my-word/workflows/MakeCode/badge.svg)
+## Version history
+
+1.0.0 (01 Feb 2022): Initial release
+1.1.3 (02 Feb 2022): Expanded and edited dictionary, added sound effects, empty guess returns to game board
+1.2.0 (03 Feb 2022): Added statistics; use Konami code to view and reset (enter empty guess when keyboard appears)
+
+## Edit this game ![Build status badge](https://github.com/robo-technical-group/whats-my-word/workflows/MakeCode/badge.svg)
 
 To edit this repository in MakeCode.
 

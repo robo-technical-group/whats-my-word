@@ -46,6 +46,12 @@ enum GuessStatus {
     NotWord
 }
 
+interface Stats {
+    wins: number,
+    games: number,
+    guesses: number[]
+}
+
 /**
  * Constants
  */
@@ -79,6 +85,7 @@ let nextReveal: number = 0
 let numMatches: number = 0
 let promptSprite: TextSprite = null
 let splashScreen: SplashScreens = null
+let stats: Stats = null
 let theWord: string = ""
 
 /**
@@ -101,6 +108,7 @@ function startGame(): void {
     let img: Image = image.create(screen.width, screen.height)
     img.fill(Color.Wine)
     scene.setBackgroundImage(img)
+    loadStats()
     setupBoard()
     resetBoard()
     startRound()
@@ -200,6 +208,13 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     }   // switch (gameMode)
 })  // controller.up.onEvent()
 
+controller.combos.attachCombo("ududlrlrba", function() {
+    showStats()
+    if (game.ask("Reset stats?")) {
+        resetStats()
+    }
+})
+
 /**
  * Other functions
  */
@@ -208,6 +223,24 @@ function buildSplashScreen(): void {
         TEXT_TITLES, Color.Yellow,
         TEXT_HEADLINES, Color.Brown,
         TEXT_ACTIONS, Color.LightBlue)
+}
+
+function endGame(win: boolean) {
+    stats.games++
+    if (win) {
+        stats.wins++
+        game.splash(theWord + "!", "Got it in " + (currGuess + 1) +
+            (currGuess == 0 ? " guess!!" : " guesses!"))
+        stats.guesses[currGuess]++
+    }
+
+    saveStats()
+    showStats()
+    if (win) {
+        game.over(true, effects.confetti)
+    } else {
+        game.over(false, effects.dissolve)
+    }
 }
 
 function findGuess(): boolean {
@@ -219,6 +252,15 @@ function findGuess(): boolean {
         }
     }
     return false
+}
+
+function loadStats(): void {
+    stats = {
+        wins: settings.exists("saved") ? settings.readNumber("wins") : 0,
+        games: settings.exists("saved") ? settings.readNumber("games") : 0,
+        guesses: settings.exists("saved") ? settings.readNumberArray("guesses")
+            : [0, 0, 0, 0, 0, 0]
+    }
 }
 
 function getGuess(): void {
@@ -319,8 +361,22 @@ function revealNext(): void {
 }
 
 function revealWord(): void {
-    game.splash("The password is " + theWord + ".")
-    game.over(false, effects.dissolve)
+    game.splash("[Whispers] The password is " + theWord + ".")
+    endGame(false)
+}
+
+function resetStats(): void {
+    stats.wins = 0
+    stats.games = 0
+    stats.guesses = [0, 0, 0, 0, 0, 0]
+    saveStats()
+}
+
+function saveStats(): void {
+    settings.writeNumber("saved", 1)
+    settings.writeNumber("wins", stats.wins)
+    settings.writeNumber("games", stats.games)
+    settings.writeNumberArray("guesses", stats.guesses)
 }
 
 function setupBoard(): void {
@@ -406,14 +462,28 @@ function setupBoard(): void {
      }
 }
 
+function showStats(): void {
+    let message: string =
+        "Wins: " + stats.wins + "\n"
+        + "Games: " + stats.games + "\n"
+    if (stats.games > 0) {
+        message +=
+            "Win %: " + Math.round(stats.wins / stats.games * 100) + "%\n"
+            + "Guesses:\n"
+        for (let i: number = 0; i < MAX_GUESSES; i++) {
+            message += (i + 1) + ": " + stats.guesses[i]
+                + "(" + Math.round(stats.guesses[i] / stats.games * 100) + "%)\n"
+        }
+    }
+    game.showLongText(message, DialogLayout.Full)
+}
+
 function startNextGuess(): void {
     if (numMatches == WORD_LENGTH) {
-        game.splash(theWord + "!", "Got it in " + (currGuess + 1) + 
-            (currGuess == 0 ? " guess!!" : " guesses!"))
         if (currGuess < MAX_GUESSES) {
-            game.over(true, effects.confetti)
+            endGame(true)
         } else {
-            game.over(false, effects.dissolve)
+            endGame(false)
         }
     } else if (currGuess >= MAX_GUESSES - 1) {
         music.wawawawaa.playUntilDone()
