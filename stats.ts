@@ -56,7 +56,7 @@ class Stats {
             message +=
                 "Win %: " + Math.round(this.wins / this.games * 100) + "%\n"
                 + "Guesses:\n"
-            for (let i: number = 0; i < Game.MAX_GUESSES; i++) {
+            for (let i: number = 0; i < MainGame.MAX_GUESSES; i++) {
                 message += (i + 1) + ": " + this.guesses[i]
                     + "(" + Math.round(this.guesses[i] / this.games * 100) + "%)\n"
             }

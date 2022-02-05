@@ -14,8 +14,8 @@
 /**
  * Global variables
  */
-let __game: Game = null
-let __stats: Stats = null
+let g_game: MainGame = null
+let g_stats: Stats = null
 
 /**
  * Main() a.k.a. game.onStart()
@@ -26,38 +26,39 @@ startAttractMode()
  * Start game modes
  */
 function startGame(): void {
-    __gameMode = GameMode.NotReady
-    __splashScreen.release()
+    g_gameMode = GameMode.NotReady
+    g_splashScreen.release()
     scene.setBackgroundImage(assets.image`bg`)
-    __stats = new Stats()
-    __game = new Game()
-    __game.startRound()
-    __gameMode = GameMode.Main
+    g_stats = new Stats()
+    g_game = new MainGame()
+    g_game.startRound()
+    g_gameMode = GameMode.Main
 }   // startGame()
 
 /**
  * Game loops
  */
 game.onUpdate(function () {
-    switch (__gameMode) {
+    switch (g_gameMode) {
         case GameMode.Attract:
-            if (game.runtime() >= __splashScreen.nextTime) {
-                __splashScreen.rotate()
-            }   // if (game.runtime() >= __splashScreen.nextTime)
+            if (game.runtime() >= g_splashScreen.nextTime) {
+                g_splashScreen.rotate()
+            }   // if (game.runtime() >= g_splashScreen.nextTime)
             break
 
         case GameMode.Main:
             break
 
         case GameMode.ShowGuess:
-            if (game.runtime() >= __game.nextReveal) {
-                __game.revealNext()
-                if (__game.revealFinished) {
+            if (game.runtime() >= g_game.nextReveal) {
+                if (! g_game.revealFinished) {
+                    g_game.revealNext()
+                } else {
                     startNextGuess()
                 }
             }
             break
-    }   // switch (__gameMode)
+    }   // switch (g_gameMode)
 })  // game.onUpdate()
 
 
@@ -66,49 +67,49 @@ game.onUpdate(function () {
  */
 function endGame(win: boolean) {
     if (win) {
-        __stats.addWin(__game.guessCount)
-        game.splash(__game.getPuzzle() + "!",
-        "Got it in " + __game.guessCount +
-            (__game.guessCount == 1 ? " guess!!" : " guesses!"))
-        __stats.show()
+        g_stats.addWin(g_game.guessCount)
+        game.splash(g_game.getPuzzle() + "!",
+        "Got it in " + g_game.guessCount +
+            (g_game.guessCount == 1 ? " guess!!" : " guesses!"))
+        g_stats.show()
         game.over(true, effects.confetti)
     } else {
-        __stats.addLoss()
-        __stats.show()
+        g_stats.addLoss()
+        g_stats.show()
         game.over(false, effects.dissolve)
     }
 }
 
 function getGuess(): void {
-    __gameMode = GameMode.NotReady
-    __game.getGuess()
-    if (__game.resetRequested) {
+    g_gameMode = GameMode.NotReady
+    g_game.getGuess()
+    if (g_game.resetRequested) {
         startNextGuess()
     } else {
-        __gameMode = GameMode.ShowGuess
+        g_gameMode = GameMode.ShowGuess
     }
 }
 
 function revealWord(): void {
-    __game.revealPuzzle()
+    g_game.revealPuzzle()
     endGame(false)
 }
 
 function startNextGuess(): void {
-    if (__game.guess.numMatches == Game.WORD_LENGTH) {
-        if (__game.guessCount <= Game.MAX_GUESSES) {
+    if (g_game.guess.numMatches == MainGame.WORD_LENGTH) {
+        if (g_game.guessCount <= MainGame.MAX_GUESSES) {
             endGame(true)
         } else {
             endGame(false)
         }
-    } else if (__game.guessCount >= Game.MAX_GUESSES) {
+    } else if (g_game.guessCount >= MainGame.MAX_GUESSES) {
         music.wawawawaa.playUntilDone()
-        __game.board.showGiveUpPrompt()
-        __game.board.showWordPrompt()
-        __gameMode = GameMode.Lose
+        g_game.board.showGiveUpPrompt()
+        g_game.board.showWordPrompt()
+        g_gameMode = GameMode.Lose
     } else {
-        __game.board.showWordPrompt()
-        __gameMode = GameMode.Main
+        g_game.board.showWordPrompt()
+        g_gameMode = GameMode.Main
     }
 }
 

@@ -2,7 +2,7 @@
  * Game controls
  */
 
-class Game {
+class MainGame {
     public static readonly MAX_GUESSES: number = 6
     public static readonly WORD_LENGTH: number = 5
     
@@ -13,8 +13,8 @@ class Game {
     public revealFinished: boolean
     public resetRequested: boolean
 
-    private _lastRevealed: number
-    private _puzzleWord: string
+    private lastRevealed: number
+    private puzzleWord: string
 
     public constructor() {
         this.board = new GameBoard()
@@ -38,12 +38,12 @@ class Game {
         this.board.hideGiveUpPrompt()
         this.board.hideWordPrompt()
         this.guessCount++
-        let message: String = "Guess " + this.guessCount++ + " of " + Game.MAX_GUESSES
+        let message: String = "Guess " + this.guessCount + " of " + MainGame.MAX_GUESSES
         let playerInput: string = ""
         let validation: number = this.validateInput(playerInput)
         let reset: boolean = false
         while (validation != GuessStatus.OK && !reset) {
-            playerInput = game.askForString(message, Game.WORD_LENGTH) + ""
+            playerInput = game.askForString(message, MainGame.WORD_LENGTH) + ""
             console.log("playerInput = " + playerInput + "; length " + playerInput.length)
             if (playerInput == "undefined" || playerInput.length == 0) {
                 reset = true
@@ -51,7 +51,7 @@ class Game {
                 validation = this.validateInput(playerInput)
                 switch (validation) {
                     case GuessStatus.WrongLength:
-                        game.splash("Guess must be " + Game.WORD_LENGTH + " characters.")
+                        game.splash("Guess must be " + MainGame.WORD_LENGTH + " characters.")
                         break
 
                     case GuessStatus.NotWord:
@@ -64,46 +64,47 @@ class Game {
             this.guessCount--
             this.resetRequested = true
         } else {
+            console.log("Guess #" + this.guessCount + ": " + playerInput)
             this.resetRequested = false
-            this.guess = new Guess(playerInput, this._puzzleWord)
+            this.guess = new Guess(playerInput, this.puzzleWord)
             this.nextReveal = game.runtime()
-            this._lastRevealed = -1
+            this.lastRevealed = -1
             this.revealFinished = false
         }
     }
 
     public getPuzzle(): string {
-        return this._puzzleWord
+        return this.puzzleWord
     }
 
     public revealNext(): void {
-        this._lastRevealed++
+        this.lastRevealed++
         let row: number = this.guessCount - 1
-        if (this.guessCount > Game.MAX_GUESSES) {
-            row = Game.MAX_GUESSES - 1
+        if (this.guessCount > MainGame.MAX_GUESSES) {
+            row = MainGame.MAX_GUESSES - 1
         }
-        this.board.reveal(row, this._lastRevealed,
-            this.guess.guess.charAt(this._lastRevealed),
-            this.guess.matches[this._lastRevealed])
+        this.board.reveal(row, this.lastRevealed,
+            this.guess.guess.charAt(this.lastRevealed),
+            this.guess.matches[this.lastRevealed])
         this.nextReveal = game.runtime() + GameBoard.REVEAL_DELAY
-        if (this._lastRevealed >= Game.WORD_LENGTH) {
+        if (this.lastRevealed >= MainGame.WORD_LENGTH - 1) {
             this.revealFinished = true
         }
     }
 
     public revealPuzzle(): void {
-        game.splash("[Whispers] The password is " + this._puzzleWord + ".")
+        game.splash("[Whispers] The password is " + this.puzzleWord + ".")
     }
 
     public startRound(): void {
-        this._puzzleWord = WORDS._pickRandom()
-        console.log("[Whispers] The password is " + this._puzzleWord + ".")
+        this.puzzleWord = WORDS._pickRandom()
+        console.log("[Whispers] The password is " + this.puzzleWord + ".")
         this.guessCount = 0
         this.board.reset()
     }
 
     private validateInput(input: string): number {
-        if (input.length != Game.WORD_LENGTH) {
+        if (input.length != MainGame.WORD_LENGTH) {
             return GuessStatus.WrongLength
         }
         if (! this.findInDictionary(input)) {
