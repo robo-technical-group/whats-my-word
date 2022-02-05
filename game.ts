@@ -55,7 +55,7 @@ class MainGame {
                         break
 
                     case GuessStatus.NotWord:
-                        game.splash(playerInput + " not found in dictionary.")
+                        game.splash(playerInput.toUpperCase() + " not found in dictionary.")
                         break
                 }
             }

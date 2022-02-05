@@ -11,7 +11,7 @@ a.k.a. MakeCode Arcade port of Josh Wardle's *Wordle*.
 1.0.0 (01 Feb 2022): Initial release
 1.1.3 (02 Feb 2022): Expanded and edited dictionary, added sound effects, empty guess returns to game board
 1.2.2 (04 Feb 2022): Added statistics; use Konami code to view and reset (enter empty guess when keyboard appears)
-2.0.0 (04 Feb 2022): Refactor for updated JS template and better OOP
+2.0.1 (04 Feb 2022): Refactor for updated JS template and better OOP
 
 ## Edit this game ![Build status badge](https://github.com/robo-technical-group/whats-my-word/workflows/MakeCode/badge.svg)
 
