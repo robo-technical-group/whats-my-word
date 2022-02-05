@@ -44,7 +44,7 @@ class MainGame {
         let reset: boolean = false
         while (validation != GuessStatus.OK && !reset) {
             playerInput = game.askForString(message, MainGame.WORD_LENGTH) + ""
-            console.log("playerInput = " + playerInput + "; length " + playerInput.length)
+            // console.log("playerInput = " + playerInput + "; length " + playerInput.length)
             if (playerInput == "undefined" || playerInput.length == 0) {
                 reset = true
             } else {
@@ -64,7 +64,7 @@ class MainGame {
             this.guessCount--
             this.resetRequested = true
         } else {
-            console.log("Guess #" + this.guessCount + ": " + playerInput)
+            // console.log("Guess #" + this.guessCount + ": " + playerInput)
             this.resetRequested = false
             this.guess = new Guess(playerInput, this.puzzleWord)
             this.nextReveal = game.runtime()
@@ -98,7 +98,7 @@ class MainGame {
 
     public startRound(): void {
         this.puzzleWord = WORDS._pickRandom()
-        console.log("[Whispers] The password is " + this.puzzleWord + ".")
+        // console.log("[Whispers] The password is " + this.puzzleWord + ".")
         this.guessCount = 0
         this.board.reset()
     }

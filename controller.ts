@@ -20,6 +20,10 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
             startGame()
             break
 
+        case GameMode.Lose:
+            g_game.revealPuzzle()
+            break
+            
         case GameMode.Main:
             break
     }   // switch (g_gameMode)
