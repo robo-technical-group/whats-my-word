@@ -42,6 +42,8 @@ class GameBoard {
                 letterSprite.fg = Color.White
                 letterBoardSprite.bg = Color.BrightGreen
                 letterBoardSprite.fg = Color.White
+                // Just in case the letter had previously been cleared
+                letterBoardSprite.text = upperLetter
                 break
 
             case MatchStatus.WrongPlace:
@@ -51,6 +53,8 @@ class GameBoard {
                 if (letterBoardSprite.bg == 0) {
                     letterBoardSprite.bg = Color.Yellow
                     letterBoardSprite.fg = Color.Black
+                    // Just in case the letter had previously been cleared
+                    letterBoardSprite.text = upperLetter
                 }
                 break
 
@@ -58,6 +62,9 @@ class GameBoard {
                 music.knock.play()
                 letterSprite.bg = Color.Black
                 letterSprite.fg = Color.White
+                // For a guess like GAUGE, if the second G matches
+                //   but not the first, then this breaks the letter board.
+                //   Reintroduce the text in matches just in case.
                 if (letterBoardSprite.bg == 0) {
                     letterBoardSprite.text = ""
                 }
