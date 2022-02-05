@@ -1292,7 +1292,6 @@ const WORDS: string[] = [
     "BOOTY",
     "GLIDE",
     "BERRY",
-    "PAULA",
     "FRIED",
     "BOOTH",
     "TAXED",
