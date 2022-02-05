@@ -22,6 +22,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
 
         case GameMode.Lose:
             g_game.revealPuzzle()
+            endGame(false)
             break
             
         case GameMode.Main:
@@ -78,4 +79,5 @@ controller.combos.attachCombo("uuddlrlrba", function () {
     if (game.ask("Reset stats?")) {
         g_stats.reset()
     }
+    startNextGuess()
 })

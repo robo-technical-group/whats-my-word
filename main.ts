@@ -96,7 +96,7 @@ function revealWord(): void {
 }
 
 function startNextGuess(): void {
-    if (g_game.guess.numMatches == MainGame.WORD_LENGTH) {
+    if (g_game.guess && g_game.guess.numMatches == MainGame.WORD_LENGTH) {
         if (g_game.guessCount <= MainGame.MAX_GUESSES) {
             endGame(true)
         } else {
