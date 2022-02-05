@@ -1,5 +1,5 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.7.24/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"2.0.4","target":"arcade","targetVersion":"1.7.24","repo":"robo-technical-group/whats-my-word"}
-// total=2058066 new=14.41% cached=80.37% other=5.22%
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.7.24/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"2.0.5","target":"arcade","targetVersion":"1.7.24","repo":"robo-technical-group/whats-my-word"}
+// total=2058542 new=14.43% cached=80.35% other=5.22%
 (function (ectx) {
 'use strict';
 const runtime = ectx.runtime;
@@ -589,7 +589,7 @@ const pxsim_pxtrt = pxsim.pxtrt;
 const pxsim_numops = pxsim.numops;
 
 
-function _main___P25988(s) {
+function _main___P55034(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -3304,7 +3304,7 @@ switch (step) {
     r0 = pxsim_Array__push(s.tmp_0, "GRAFT");
     r0 = pxsim_Array__push(s.tmp_0, "HALTS");
     r0 = pxsim_Array__push(s.tmp_0, "GAPED");
-    globals.WORDS___25313 = (s.tmp_0);
+    globals.WORDS___4037 = (s.tmp_0);
     r0 = pxsim_Array__mk();
     s.tmp_0 = r0;
     r0 = pxsim_Array__push(s.tmp_0, "MakeCode Arcade port of");
@@ -3414,13 +3414,13 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-_main___P25988.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"pxt_modules/arcade-text/main.ts","functionName":"<main>","argumentNames":[]}
-_main___P25988.continuations = [  ]
+_main___P55034.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"pxt_modules/arcade-text/main.ts","functionName":"<main>","argumentNames":[]}
+_main___P55034.continuations = [  ]
 
-function _main___P25988_mk(s) {
+function _main___P55034_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: _main___P25988, depth: s.depth + 1,
+        parent: s, fn: _main___P55034, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -3788,7 +3788,7 @@ switch (step) {
     r0 = s.retval;
     { step = 4; continue; }
   case 2:
-    s.tmp_0 = MainGame_revealPuzzle__P4118_mk(s);
+    s.tmp_0 = MainGame_revealPuzzle__P54170_mk(s);
     s.tmp_0.arg0 = globals.g_game___4030;
     s.callLocIdx = 69; s.pc = 6; return s.tmp_0;
   case 6:
@@ -4203,7 +4203,7 @@ switch (step) {
     s.tmp_4 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_4);
     if (!r0) { step = 6; continue; }
-    s.tmp_7 = MainGame_revealNext__P4117_mk(s);
+    s.tmp_7 = MainGame_revealNext__P54253_mk(s);
     s.tmp_7.arg0 = globals.g_game___4030;
     s.callLocIdx = 177; s.pc = 14; return s.tmp_7;
   case 14:
@@ -4243,7 +4243,7 @@ function inline__P7631_mk(s) {
 
 
 
-function MainGame_revealNext__P4117(s) {
+function MainGame_revealNext__P54253(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -4253,13 +4253,13 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.row___7532 = undefined;
+    s.row___54398 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, MainGame__C4104_VT)) failedCast(r0);
+    if (!checkSubtype(r0, MainGame__C54249_VT)) failedCast(r0);
     s.tmp_0 = r0 = s.arg0;
     r0 = s.tmp_0.fields["lastRevealed"];
     s.tmp_2 = r0;
@@ -4269,20 +4269,20 @@ switch (step) {
     r0 = s.arg0.fields["guessCount"];
     s.tmp_0 = r0;
     r0 = (s.tmp_0 - 1);
-    s.row___7532 = (r0);
+    s.row___54398 = (r0);
     r0 = s.arg0.fields["guessCount"];
     s.tmp_1 = r0;
     r0 = (s.tmp_1 > 6);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    s.row___7532 = (5);
+    s.row___54398 = (5);
   case 1:
   case 2:
-    s.tmp_0 = GameBoard_reveal__P4100_mk(s);
+    s.tmp_0 = GameBoard_reveal__P50465_mk(s);
     r0 = s.arg0.fields["board"];
     s.tmp_0.arg0 = r0;
-    s.tmp_0.arg1 = s.row___7532;
+    s.tmp_0.arg1 = s.row___54398;
     r0 = s.arg0.fields["lastRevealed"];
     s.tmp_0.arg2 = r0;
     r0 = s.arg0.fields["guess"];
@@ -4324,19 +4324,19 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-MainGame_revealNext__P4117.info = {"start":2561,"length":547,"line":79,"column":4,"endLine":92,"endColumn":5,"fileName":"game.ts","functionName":"revealNext","argumentNames":["this"]}
+MainGame_revealNext__P54253.info = {"start":2561,"length":547,"line":79,"column":4,"endLine":92,"endColumn":5,"fileName":"game.ts","functionName":"revealNext","argumentNames":["this"]}
 
-function MainGame_revealNext__P4117_mk(s) {
+function MainGame_revealNext__P54253_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: MainGame_revealNext__P4117, depth: s.depth + 1,
+        parent: s, fn: MainGame_revealNext__P54253, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
   tmp_3: undefined,
   tmp_4: undefined,
-  row___7532: undefined,
+  row___54398: undefined,
   arg0: undefined,
 } }
 
@@ -4344,7 +4344,7 @@ function MainGame_revealNext__P4117_mk(s) {
 
 
 
-function GameBoard_reveal__P4100(s) {
+function GameBoard_reveal__P50465(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -4354,10 +4354,10 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.letterSprite___7075 = undefined;
-    s.upperLetter___7081 = undefined;
-    s.charIndex___7088 = undefined;
-    s.letterBoardSprite___7096 = undefined;
+    s.letterSprite___50506 = undefined;
+    s.upperLetter___50512 = undefined;
+    s.charIndex___50518 = undefined;
+    s.letterBoardSprite___50526 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -4367,30 +4367,30 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, GameBoard__C4095_VT)) failedCast(r0);
+    if (!checkSubtype(r0, GameBoard__C50462_VT)) failedCast(r0);
     r0 = s.arg0.fields["gameBoard"];
     s.tmp_1 = r0;
     r0 = pxsim_Array__getAt(s.tmp_1, s.arg1);
     s.tmp_0 = r0;
     r0 = pxsim_Array__getAt(s.tmp_0, s.arg2);
-    s.letterSprite___7075 = (r0);
+    s.letterSprite___50506 = (r0);
     s.tmp_0 = helpers_stringToUpperCase__P120_mk(s);
     s.tmp_0.arg0 = s.arg3;
     s.callLocIdx = 113; s.pc = 9; return s.tmp_0;
   case 9:
     r0 = s.retval;
-    s.upperLetter___7081 = (r0);
-    r0 = (s.letterSprite___7075).fields["text"] = (s.upperLetter___7081);
-    r0 = pxsim_String_.charCodeAt(s.upperLetter___7081, 0);
+    s.upperLetter___50512 = (r0);
+    r0 = (s.letterSprite___50506).fields["text"] = (s.upperLetter___50512);
+    r0 = pxsim_String_.charCodeAt(s.upperLetter___50512, 0);
     s.tmp_0 = r0;
     r0 = pxsim_String_.charCodeAt("A", 0);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 - s.tmp_1);
-    s.charIndex___7088 = (r0);
+    s.charIndex___50518 = (r0);
     r0 = s.arg0.fields["letterBoard"];
     s.tmp_0 = r0;
-    r0 = pxsim_Array__getAt(s.tmp_0, s.charIndex___7088);
-    s.letterBoardSprite___7096 = (r0);
+    r0 = pxsim_Array__getAt(s.tmp_0, s.charIndex___50518);
+    s.letterBoardSprite___50526 = (r0);
     s.tmp_0 = r0 = s.arg4;
     r0 = pxsim_pxtcore.switch_eq(0, s.tmp_0);
     if (r0) { step = 1; continue; }
@@ -4405,10 +4405,11 @@ switch (step) {
     s.callLocIdx = 114; s.pc = 10; return s.tmp_1;
   case 10:
     r0 = s.retval;
-    r0 = (s.letterSprite___7075).fields["bg"] = (7);
-    r0 = (s.letterSprite___7075).fields["fg"] = (1);
-    r0 = (s.letterBoardSprite___7096).fields["bg"] = (7);
-    r0 = (s.letterBoardSprite___7096).fields["fg"] = (1);
+    r0 = (s.letterSprite___50506).fields["bg"] = (7);
+    r0 = (s.letterSprite___50506).fields["fg"] = (1);
+    r0 = (s.letterBoardSprite___50526).fields["bg"] = (7);
+    r0 = (s.letterBoardSprite___50526).fields["fg"] = (1);
+    r0 = (s.letterBoardSprite___50526).fields["text"] = (s.upperLetter___50512);
     { step = 8; continue; }
   case 2:
     s.tmp_0 = music_Melody_play__P1617_mk(s);
@@ -4417,16 +4418,17 @@ switch (step) {
     s.callLocIdx = 115; s.pc = 11; return s.tmp_0;
   case 11:
     r0 = s.retval;
-    r0 = (s.letterSprite___7075).fields["bg"] = (5);
-    r0 = (s.letterSprite___7075).fields["fg"] = (15);
-    r0 = s.letterBoardSprite___7096.fields["bg"];
+    r0 = (s.letterSprite___50506).fields["bg"] = (5);
+    r0 = (s.letterSprite___50506).fields["fg"] = (15);
+    r0 = s.letterBoardSprite___50526.fields["bg"];
     s.tmp_1 = r0;
     r0 = (s.tmp_1 == 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 3; continue; }
-    r0 = (s.letterBoardSprite___7096).fields["bg"] = (5);
-    r0 = (s.letterBoardSprite___7096).fields["fg"] = (15);
+    r0 = (s.letterBoardSprite___50526).fields["bg"] = (5);
+    r0 = (s.letterBoardSprite___50526).fields["fg"] = (15);
+    r0 = (s.letterBoardSprite___50526).fields["text"] = (s.upperLetter___50512);
   case 3:
   case 4:
     { step = 8; continue; }
@@ -4437,15 +4439,15 @@ switch (step) {
     s.callLocIdx = 116; s.pc = 12; return s.tmp_0;
   case 12:
     r0 = s.retval;
-    r0 = (s.letterSprite___7075).fields["bg"] = (15);
-    r0 = (s.letterSprite___7075).fields["fg"] = (1);
-    r0 = s.letterBoardSprite___7096.fields["bg"];
+    r0 = (s.letterSprite___50506).fields["bg"] = (15);
+    r0 = (s.letterSprite___50506).fields["fg"] = (1);
+    r0 = s.letterBoardSprite___50526.fields["bg"];
     s.tmp_1 = r0;
     r0 = (s.tmp_1 == 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 6; continue; }
-    s.tmp_2 = r0 = s.letterBoardSprite___7096;
+    s.tmp_2 = r0 = s.letterBoardSprite___50526;
     r0 = pxsim_String_.mkEmpty();
     s.tmp_3 = r0;
     r0 = (s.tmp_2).fields["text"] = (s.tmp_3);
@@ -4453,12 +4455,12 @@ switch (step) {
   case 7:
   case 8:
     s.tmp_0 = TextSprite_update__P3850_mk(s);
-    s.tmp_0.arg0 = s.letterSprite___7075;
+    s.tmp_0.arg0 = s.letterSprite___50506;
     s.callLocIdx = 117; s.pc = 13; return s.tmp_0;
   case 13:
     r0 = s.retval;
     s.tmp_0 = TextSprite_update__P3850_mk(s);
-    s.tmp_0.arg0 = s.letterBoardSprite___7096;
+    s.tmp_0.arg0 = s.letterBoardSprite___50526;
     s.callLocIdx = 118; s.pc = 14; return s.tmp_0;
   case 14:
     r0 = s.retval;
@@ -4466,21 +4468,21 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-GameBoard_reveal__P4100.info = {"start":706,"length":1462,"line":31,"column":4,"endLine":67,"endColumn":5,"fileName":"board.ts","functionName":"reveal","argumentNames":["this","row","col","letter","status"]}
+GameBoard_reveal__P50465.info = {"start":706,"length":1927,"line":31,"column":4,"endLine":74,"endColumn":5,"fileName":"board.ts","functionName":"reveal","argumentNames":["this","row","col","letter","status"]}
 
-function GameBoard_reveal__P4100_mk(s) {
+function GameBoard_reveal__P50465_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: GameBoard_reveal__P4100, depth: s.depth + 1,
+        parent: s, fn: GameBoard_reveal__P50465, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
   tmp_3: undefined,
-  letterSprite___7075: undefined,
-  upperLetter___7081: undefined,
-  charIndex___7088: undefined,
-  letterBoardSprite___7096: undefined,
+  letterSprite___50506: undefined,
+  upperLetter___50512: undefined,
+  charIndex___50518: undefined,
+  letterBoardSprite___50526: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -18437,13 +18439,13 @@ switch (step) {
     s.callLocIdx = 192; s.pc = 11; return s.tmp_2;
   case 11:
     r0 = s.retval;
-    s.tmp_0 = GameBoard_showGiveUpPrompt__P4102_mk(s);
+    s.tmp_0 = GameBoard_showGiveUpPrompt__P50467_mk(s);
     r0 = globals.g_game___4030.fields["board"];
     s.tmp_0.arg0 = r0;
     s.callLocIdx = 193; s.pc = 12; return s.tmp_0;
   case 12:
     r0 = s.retval;
-    s.tmp_0 = GameBoard_showWordPrompt__P4103_mk(s);
+    s.tmp_0 = GameBoard_showWordPrompt__P50468_mk(s);
     r0 = globals.g_game___4030.fields["board"];
     s.tmp_0.arg0 = r0;
     s.callLocIdx = 194; s.pc = 13; return s.tmp_0;
@@ -18452,7 +18454,7 @@ switch (step) {
     globals.g_gameMode___4050 = (1);
     { step = 7; continue; }
   case 6:
-    s.tmp_0 = GameBoard_showWordPrompt__P4103_mk(s);
+    s.tmp_0 = GameBoard_showWordPrompt__P50468_mk(s);
     r0 = globals.g_game___4030.fields["board"];
     s.tmp_0.arg0 = r0;
     s.callLocIdx = 195; s.pc = 14; return s.tmp_0;
@@ -18484,7 +18486,7 @@ function startNextGuess__P4036_mk(s) {
 
 
 
-function GameBoard_showWordPrompt__P4103(s) {
+function GameBoard_showWordPrompt__P50468(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -18499,7 +18501,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, GameBoard__C4095_VT)) failedCast(r0);
+    if (!checkSubtype(r0, GameBoard__C50462_VT)) failedCast(r0);
     s.tmp_0 = Sprite_setFlag__P2158_mk(s);
     r0 = s.arg0.fields["promptSprite"];
     s.tmp_0.arg0 = r0;
@@ -18512,12 +18514,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-GameBoard_showWordPrompt__P4103.info = {"start":2718,"length":100,"line":85,"column":4,"endLine":87,"endColumn":5,"fileName":"board.ts","functionName":"showWordPrompt","argumentNames":["this"]}
+GameBoard_showWordPrompt__P50468.info = {"start":3183,"length":100,"line":92,"column":4,"endLine":94,"endColumn":5,"fileName":"board.ts","functionName":"showWordPrompt","argumentNames":["this"]}
 
-function GameBoard_showWordPrompt__P4103_mk(s) {
+function GameBoard_showWordPrompt__P50468_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: GameBoard_showWordPrompt__P4103, depth: s.depth + 1,
+        parent: s, fn: GameBoard_showWordPrompt__P50468, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -18527,7 +18529,7 @@ function GameBoard_showWordPrompt__P4103_mk(s) {
 
 
 
-function GameBoard_showGiveUpPrompt__P4102(s) {
+function GameBoard_showGiveUpPrompt__P50467(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -18542,7 +18544,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, GameBoard__C4095_VT)) failedCast(r0);
+    if (!checkSubtype(r0, GameBoard__C50462_VT)) failedCast(r0);
     s.tmp_0 = Sprite_setFlag__P2158_mk(s);
     r0 = s.arg0.fields["giveUpSprite"];
     s.tmp_0.arg0 = r0;
@@ -18555,12 +18557,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-GameBoard_showGiveUpPrompt__P4102.info = {"start":2610,"length":102,"line":81,"column":4,"endLine":83,"endColumn":5,"fileName":"board.ts","functionName":"showGiveUpPrompt","argumentNames":["this"]}
+GameBoard_showGiveUpPrompt__P50467.info = {"start":3075,"length":102,"line":88,"column":4,"endLine":90,"endColumn":5,"fileName":"board.ts","functionName":"showGiveUpPrompt","argumentNames":["this"]}
 
-function GameBoard_showGiveUpPrompt__P4102_mk(s) {
+function GameBoard_showGiveUpPrompt__P50467_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: GameBoard_showGiveUpPrompt__P4102, depth: s.depth + 1,
+        parent: s, fn: GameBoard_showGiveUpPrompt__P50467, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -39614,7 +39616,7 @@ function info_saveHighScore_inline__P11346_mk(s) {
 
 
 
-function MainGame_getPuzzle__P4116(s) {
+function MainGame_getPuzzle__P54252(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -39629,17 +39631,17 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, MainGame__C4104_VT)) failedCast(r0);
+    if (!checkSubtype(r0, MainGame__C54249_VT)) failedCast(r0);
     r0 = s.arg0.fields["puzzleWord"];
     return leave(s, r0)
   default: oops()
 } } }
-MainGame_getPuzzle__P4116.info = {"start":2490,"length":65,"line":75,"column":4,"endLine":77,"endColumn":5,"fileName":"game.ts","functionName":"getPuzzle","argumentNames":["this"]}
+MainGame_getPuzzle__P54252.info = {"start":2490,"length":65,"line":75,"column":4,"endLine":77,"endColumn":5,"fileName":"game.ts","functionName":"getPuzzle","argumentNames":["this"]}
 
-function MainGame_getPuzzle__P4116_mk(s) {
+function MainGame_getPuzzle__P54252_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: MainGame_getPuzzle__P4116, depth: s.depth + 1,
+        parent: s, fn: MainGame_getPuzzle__P54252, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
 } }
@@ -40326,7 +40328,7 @@ function Stats_addWin__P4090_mk(s) {
 
 
 
-function MainGame_revealPuzzle__P4118(s) {
+function MainGame_revealPuzzle__P54170(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -40341,7 +40343,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, MainGame__C4104_VT)) failedCast(r0);
+    if (!checkSubtype(r0, MainGame__C54249_VT)) failedCast(r0);
     s.tmp_0 = game_splash__P2603_mk(s);
     r0 = s.arg0.fields["puzzleWord"];
     s.tmp_4 = r0;
@@ -40375,12 +40377,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-MainGame_revealPuzzle__P4118.info = {"start":3114,"length":110,"line":94,"column":4,"endLine":96,"endColumn":5,"fileName":"game.ts","functionName":"revealPuzzle","argumentNames":["this"]}
+MainGame_revealPuzzle__P54170.info = {"start":3114,"length":110,"line":94,"column":4,"endLine":96,"endColumn":5,"fileName":"game.ts","functionName":"revealPuzzle","argumentNames":["this"]}
 
-function MainGame_revealPuzzle__P4118_mk(s) {
+function MainGame_revealPuzzle__P54170_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: MainGame_revealPuzzle__P4118, depth: s.depth + 1,
+        parent: s, fn: MainGame_revealPuzzle__P54170, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -40405,7 +40407,7 @@ switch (step) {
   case 0:
 
     globals.g_gameMode___4050 = (3);
-    s.tmp_0 = MainGame_getGuess__P4115_mk(s);
+    s.tmp_0 = MainGame_getGuess__P54251_mk(s);
     s.tmp_0.arg0 = globals.g_game___4030;
     s.callLocIdx = 188; s.pc = 3; return s.tmp_0;
   case 3:
@@ -40441,7 +40443,7 @@ function getGuess__P4034_mk(s) {
 
 
 
-function MainGame_getGuess__P4115(s) {
+function MainGame_getGuess__P54251(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -40451,23 +40453,23 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.message___7429 = undefined;
-    s.playerInput___7444 = undefined;
-    s.validation___7445 = undefined;
-    s.reset___7448 = undefined;
+    s.message___54294 = undefined;
+    s.playerInput___54309 = undefined;
+    s.validation___54310 = undefined;
+    s.reset___54313 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, MainGame__C4104_VT)) failedCast(r0);
-    s.tmp_0 = GameBoard_hideGiveUpPrompt__P4098_mk(s);
+    if (!checkSubtype(r0, MainGame__C54249_VT)) failedCast(r0);
+    s.tmp_0 = GameBoard_hideGiveUpPrompt__P50463_mk(s);
     r0 = s.arg0.fields["board"];
     s.tmp_0.arg0 = r0;
     s.callLocIdx = 150; s.pc = 14; return s.tmp_0;
   case 14:
     r0 = s.retval;
-    s.tmp_0 = GameBoard_hideWordPrompt__P4099_mk(s);
+    s.tmp_0 = GameBoard_hideWordPrompt__P50464_mk(s);
     r0 = s.arg0.fields["board"];
     s.tmp_0.arg0 = r0;
     s.callLocIdx = 151; s.pc = 15; return s.tmp_0;
@@ -40522,26 +40524,26 @@ switch (step) {
     r0 = s.retval;
     s.tmp_6 = r0;
     r0 = pxsim_String__concat(s.tmp_0, s.tmp_6);
-    s.message___7429 = (r0);
+    s.message___54294 = (r0);
     r0 = pxsim_String_.mkEmpty();
-    s.playerInput___7444 = (r0);
-    s.tmp_0 = MainGame_validateInput__P7396_mk(s);
+    s.playerInput___54309 = (r0);
+    s.tmp_0 = MainGame_validateInput__P54255_mk(s);
     s.tmp_0.arg0 = s.arg0;
-    s.tmp_0.arg1 = s.playerInput___7444;
+    s.tmp_0.arg1 = s.playerInput___54309;
     s.callLocIdx = 152; s.pc = 20; return s.tmp_0;
   case 20:
     r0 = s.retval;
-    s.validation___7445 = (r0);
-    s.reset___7448 = (false);
+    s.validation___54310 = (r0);
+    s.reset___54313 = (false);
   case 1:
-    r0 = (s.validation___7445 != 0);
+    r0 = (s.validation___54310 != 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBool(s.tmp_0);
     if (r0) { step = 2; continue; }
     r0 = s.tmp_0;
     { step = 3; continue; }
   case 2:
-    r0 = pxsim_numops_toBoolDecr(s.reset___7448);
+    r0 = pxsim_numops_toBoolDecr(s.reset___54313);
     s.tmp_1 = r0;
     r0 = pxsim_Boolean__bang(s.tmp_1);
   case 3:
@@ -40550,7 +40552,7 @@ switch (step) {
     r0 = pxsim_numops_toBoolDecr(s.tmp_2);
     if (!r0) { step = 11; continue; }
     s.tmp_5 = game_askForString__P2642_mk(s);
-    s.tmp_5.arg0 = s.message___7429;
+    s.tmp_5.arg0 = s.message___54294;
     s.tmp_5.arg1 = 5;
     s.callLocIdx = 153; s.pc = 21; return s.tmp_5;
   case 21:
@@ -40568,15 +40570,15 @@ switch (step) {
     r0 = pxsim_String_.mkEmpty();
     s.tmp_6 = r0;
     r0 = pxsim_String__concat(s.tmp_3, s.tmp_6);
-    s.playerInput___7444 = (r0);
-    r0 = (s.playerInput___7444 == "undefined");
+    s.playerInput___54309 = (r0);
+    r0 = (s.playerInput___54309 == "undefined");
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBool(s.tmp_0);
     if (!r0) { step = 4; continue; }
     r0 = s.tmp_0;
     { step = 5; continue; }
   case 4:
-    r0 = pxsim_String_.length(s.playerInput___7444);
+    r0 = pxsim_String_.length(s.playerInput___54309);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 == 0);
   case 5:
@@ -40584,17 +40586,17 @@ switch (step) {
     s.tmp_2 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_2);
     if (!r0) { step = 6; continue; }
-    s.reset___7448 = (true);
+    s.reset___54313 = (true);
     { step = 10; continue; }
   case 6:
-    s.tmp_0 = MainGame_validateInput__P7396_mk(s);
+    s.tmp_0 = MainGame_validateInput__P54255_mk(s);
     s.tmp_0.arg0 = s.arg0;
-    s.tmp_0.arg1 = s.playerInput___7444;
+    s.tmp_0.arg1 = s.playerInput___54309;
     s.callLocIdx = 154; s.pc = 23; return s.tmp_0;
   case 23:
     r0 = s.retval;
-    s.validation___7445 = (r0);
-    s.tmp_0 = r0 = s.validation___7445;
+    s.validation___54310 = (r0);
+    s.tmp_0 = r0 = s.validation___54310;
     r0 = pxsim_pxtcore.switch_eq(1, s.tmp_0);
     if (r0) { step = 7; continue; }
     r0 = pxsim_pxtcore.switch_eq(2, s.tmp_0);
@@ -40633,7 +40635,7 @@ switch (step) {
   case 8:
     s.tmp_0 = game_splash__P2603_mk(s);
     s.tmp_3 = helpers_stringToUpperCase__P120_mk(s);
-    s.tmp_3.arg0 = s.playerInput___7444;
+    s.tmp_3.arg0 = s.playerInput___54309;
     s.callLocIdx = 156; s.pc = 28; return s.tmp_3;
   case 28:
     r0 = s.retval;
@@ -40657,7 +40659,7 @@ switch (step) {
   case 10:
     { step = 1; continue; }
   case 11:
-    r0 = pxsim_numops_toBoolDecr(s.reset___7448);
+    r0 = pxsim_numops_toBoolDecr(s.reset___54313);
     if (!r0) { step = 12; continue; }
     s.tmp_0 = r0 = s.arg0;
     r0 = s.tmp_0.fields["guessCount"];
@@ -40673,7 +40675,7 @@ switch (step) {
     s.tmp_0 = r0;
     s.tmp_1 = Guess_constructor__P4046_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
-    s.tmp_1.arg1 = s.playerInput___7444;
+    s.tmp_1.arg1 = s.playerInput___54309;
     r0 = s.arg0.fields["puzzleWord"];
     s.tmp_1.arg2 = r0;
     s.callLocIdx = 158; s.pc = 30; return s.tmp_1;
@@ -40694,12 +40696,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-MainGame_getGuess__P4115.info = {"start":869,"length":1615,"line":36,"column":4,"endLine":73,"endColumn":5,"fileName":"game.ts","functionName":"getGuess","argumentNames":["this"]}
+MainGame_getGuess__P54251.info = {"start":869,"length":1615,"line":36,"column":4,"endLine":73,"endColumn":5,"fileName":"game.ts","functionName":"getGuess","argumentNames":["this"]}
 
-function MainGame_getGuess__P4115_mk(s) {
+function MainGame_getGuess__P54251_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: MainGame_getGuess__P4115, depth: s.depth + 1,
+        parent: s, fn: MainGame_getGuess__P54251, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -40708,10 +40710,10 @@ function MainGame_getGuess__P4115_mk(s) {
   tmp_4: undefined,
   tmp_5: undefined,
   tmp_6: undefined,
-  message___7429: undefined,
-  playerInput___7444: undefined,
-  validation___7445: undefined,
-  reset___7448: undefined,
+  message___54294: undefined,
+  playerInput___54309: undefined,
+  validation___54310: undefined,
+  reset___54313: undefined,
   arg0: undefined,
 } }
 
@@ -43838,7 +43840,7 @@ function game_Prompt_constructor__P2648_mk(s) {
 
 
 
-function MainGame_validateInput__P7396(s) {
+function MainGame_validateInput__P54255(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -43854,7 +43856,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, MainGame__C4104_VT)) failedCast(r0);
+    if (!checkSubtype(r0, MainGame__C54249_VT)) failedCast(r0);
     r0 = pxsim_String_.length(s.arg1);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 != 5);
@@ -43865,7 +43867,7 @@ switch (step) {
     { step = 5; continue; }
   case 1:
   case 2:
-    s.tmp_5 = MainGame_findInDictionary__P4114_mk(s);
+    s.tmp_5 = MainGame_findInDictionary__P54250_mk(s);
     s.tmp_5.arg0 = s.arg0;
     s.tmp_5.arg1 = s.arg1;
     s.callLocIdx = 165; s.pc = 6; return s.tmp_5;
@@ -43887,12 +43889,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-MainGame_validateInput__P7396.info = {"start":3448,"length":283,"line":105,"column":4,"endLine":114,"endColumn":5,"fileName":"game.ts","functionName":"validateInput","argumentNames":["this","input"]}
+MainGame_validateInput__P54255.info = {"start":3448,"length":283,"line":105,"column":4,"endLine":114,"endColumn":5,"fileName":"game.ts","functionName":"validateInput","argumentNames":["this","input"]}
 
-function MainGame_validateInput__P7396_mk(s) {
+function MainGame_validateInput__P54255_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: MainGame_validateInput__P7396, depth: s.depth + 1,
+        parent: s, fn: MainGame_validateInput__P54255, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -43908,7 +43910,7 @@ function MainGame_validateInput__P7396_mk(s) {
 
 
 
-function MainGame_findInDictionary__P4114(s) {
+function MainGame_findInDictionary__P54250(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -43918,34 +43920,34 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.word___7414 = undefined;
-    s.unnamed166___U1 = undefined;
-    s.unnamed167___U2 = undefined;
+    s.word___54278 = undefined;
+    s.unnamed638___U1 = undefined;
+    s.unnamed639___U2 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, MainGame__C4104_VT)) failedCast(r0);
+    if (!checkSubtype(r0, MainGame__C54249_VT)) failedCast(r0);
     s.tmp_0 = helpers_stringToUpperCase__P120_mk(s);
     s.tmp_0.arg0 = s.arg1;
     s.callLocIdx = 149; s.pc = 6; return s.tmp_0;
   case 6:
     r0 = s.retval;
     s.arg1 = (r0);
-    s.word___7414 = (undefined);
-    s.unnamed166___U1 = (globals.WORDS___25313);
-    s.unnamed167___U2 = (0);
+    s.word___54278 = (undefined);
+    s.unnamed638___U1 = (globals.WORDS___4037);
+    s.unnamed639___U2 = (0);
   case 1:
-    s.tmp_0 = r0 = s.unnamed167___U2;
-    r0 = pxsim_Array__length(s.unnamed166___U1);
+    s.tmp_0 = r0 = s.unnamed639___U2;
+    r0 = pxsim_Array__length(s.unnamed638___U1);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 4; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed166___U1, s.unnamed167___U2);
-    s.word___7414 = (r0);
-    r0 = (s.arg1 == s.word___7414);
+    r0 = pxsim_Array__getAt(s.unnamed638___U1, s.unnamed639___U2);
+    s.word___54278 = (r0);
+    r0 = (s.arg1 == s.word___54278);
     s.tmp_2 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_2);
     if (!r0) { step = 2; continue; }
@@ -43953,29 +43955,29 @@ switch (step) {
     { step = 5; continue; }
   case 2:
   case 3:
-    r0 = (s.unnamed167___U2 + 1);
-    s.unnamed167___U2 = (r0);
+    r0 = (s.unnamed639___U2 + 1);
+    s.unnamed639___U2 = (r0);
     { step = 1; continue; }
   case 4:
-    s.unnamed166___U1 = (undefined);
+    s.unnamed638___U1 = (undefined);
     r0 = false;
   case 5:
     return leave(s, r0)
   default: oops()
 } } }
-MainGame_findInDictionary__P4114.info = {"start":572,"length":291,"line":25,"column":4,"endLine":34,"endColumn":5,"fileName":"game.ts","functionName":"findInDictionary","argumentNames":["this","needle"]}
+MainGame_findInDictionary__P54250.info = {"start":572,"length":291,"line":25,"column":4,"endLine":34,"endColumn":5,"fileName":"game.ts","functionName":"findInDictionary","argumentNames":["this","needle"]}
 
-function MainGame_findInDictionary__P4114_mk(s) {
+function MainGame_findInDictionary__P54250_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: MainGame_findInDictionary__P4114, depth: s.depth + 1,
+        parent: s, fn: MainGame_findInDictionary__P54250, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
-  word___7414: undefined,
-  unnamed166___U1: undefined,
-  unnamed167___U2: undefined,
+  word___54278: undefined,
+  unnamed638___U1: undefined,
+  unnamed639___U2: undefined,
   arg0: undefined,
   arg1: undefined,
 } }
@@ -43984,7 +43986,7 @@ function MainGame_findInDictionary__P4114_mk(s) {
 
 
 
-function GameBoard_hideWordPrompt__P4099(s) {
+function GameBoard_hideWordPrompt__P50464(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -43999,7 +44001,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, GameBoard__C4095_VT)) failedCast(r0);
+    if (!checkSubtype(r0, GameBoard__C50462_VT)) failedCast(r0);
     s.tmp_0 = Sprite_setFlag__P2158_mk(s);
     r0 = s.arg0.fields["promptSprite"];
     s.tmp_0.arg0 = r0;
@@ -44012,12 +44014,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-GameBoard_hideWordPrompt__P4099.info = {"start":601,"length":99,"line":27,"column":4,"endLine":29,"endColumn":5,"fileName":"board.ts","functionName":"hideWordPrompt","argumentNames":["this"]}
+GameBoard_hideWordPrompt__P50464.info = {"start":601,"length":99,"line":27,"column":4,"endLine":29,"endColumn":5,"fileName":"board.ts","functionName":"hideWordPrompt","argumentNames":["this"]}
 
-function GameBoard_hideWordPrompt__P4099_mk(s) {
+function GameBoard_hideWordPrompt__P50464_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: GameBoard_hideWordPrompt__P4099, depth: s.depth + 1,
+        parent: s, fn: GameBoard_hideWordPrompt__P50464, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -44027,7 +44029,7 @@ function GameBoard_hideWordPrompt__P4099_mk(s) {
 
 
 
-function GameBoard_hideGiveUpPrompt__P4098(s) {
+function GameBoard_hideGiveUpPrompt__P50463(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -44042,7 +44044,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, GameBoard__C4095_VT)) failedCast(r0);
+    if (!checkSubtype(r0, GameBoard__C50462_VT)) failedCast(r0);
     s.tmp_0 = Sprite_setFlag__P2158_mk(s);
     r0 = s.arg0.fields["giveUpSprite"];
     s.tmp_0.arg0 = r0;
@@ -44055,12 +44057,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-GameBoard_hideGiveUpPrompt__P4098.info = {"start":494,"length":101,"line":23,"column":4,"endLine":25,"endColumn":5,"fileName":"board.ts","functionName":"hideGiveUpPrompt","argumentNames":["this"]}
+GameBoard_hideGiveUpPrompt__P50463.info = {"start":494,"length":101,"line":23,"column":4,"endLine":25,"endColumn":5,"fileName":"board.ts","functionName":"hideGiveUpPrompt","argumentNames":["this"]}
 
-function GameBoard_hideGiveUpPrompt__P4098_mk(s) {
+function GameBoard_hideGiveUpPrompt__P50463_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: GameBoard_hideGiveUpPrompt__P4098, depth: s.depth + 1,
+        parent: s, fn: GameBoard_hideGiveUpPrompt__P50463, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -44104,15 +44106,15 @@ switch (step) {
   case 4:
     r0 = s.retval;
     globals.g_stats___4031 = (s.tmp_0);
-    r0 = pxsim_pxtcore_mkClassInstance(MainGame__C4104_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(MainGame__C54249_VT);
     s.tmp_0 = r0;
-    s.tmp_1 = MainGame_constructor__P4113_mk(s);
+    s.tmp_1 = MainGame_constructor__P54256_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     s.callLocIdx = 171; s.pc = 5; return s.tmp_1;
   case 5:
     r0 = s.retval;
     globals.g_game___4030 = (s.tmp_0);
-    s.tmp_0 = MainGame_startRound__P4119_mk(s);
+    s.tmp_0 = MainGame_startRound__P54254_mk(s);
     s.tmp_0.arg0 = globals.g_game___4030;
     s.callLocIdx = 172; s.pc = 6; return s.tmp_0;
   case 6:
@@ -44137,7 +44139,7 @@ function startGame__P4032_mk(s) {
 
 
 
-function MainGame_startRound__P4119(s) {
+function MainGame_startRound__P54254(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -44152,10 +44154,10 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, MainGame__C4104_VT)) failedCast(r0);
+    if (!checkSubtype(r0, MainGame__C54249_VT)) failedCast(r0);
     s.tmp_0 = r0 = s.arg0;
-    s.tmp_2 = r0 = globals.WORDS___25313;
-    r0 = pxsim_Array__length(globals.WORDS___25313);
+    s.tmp_2 = r0 = globals.WORDS___4037;
+    r0 = pxsim_Array__length(globals.WORDS___4037);
     s.tmp_5 = r0;
     r0 = (s.tmp_5 - 1);
     s.tmp_4 = r0;
@@ -44165,7 +44167,7 @@ switch (step) {
     s.tmp_1 = r0;
     r0 = (s.tmp_0).fields["puzzleWord"] = (s.tmp_1);
     r0 = (s.arg0).fields["guessCount"] = (0);
-    s.tmp_0 = GameBoard_reset__P4101_mk(s);
+    s.tmp_0 = GameBoard_reset__P50466_mk(s);
     r0 = s.arg0.fields["board"];
     s.tmp_0.arg0 = r0;
     s.callLocIdx = 164; s.pc = 1; return s.tmp_0;
@@ -44175,12 +44177,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-MainGame_startRound__P4119.info = {"start":3230,"length":212,"line":98,"column":4,"endLine":103,"endColumn":5,"fileName":"game.ts","functionName":"startRound","argumentNames":["this"]}
+MainGame_startRound__P54254.info = {"start":3230,"length":212,"line":98,"column":4,"endLine":103,"endColumn":5,"fileName":"game.ts","functionName":"startRound","argumentNames":["this"]}
 
-function MainGame_startRound__P4119_mk(s) {
+function MainGame_startRound__P54254_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: MainGame_startRound__P4119, depth: s.depth + 1,
+        parent: s, fn: MainGame_startRound__P54254, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -44195,7 +44197,7 @@ function MainGame_startRound__P4119_mk(s) {
 
 
 
-function GameBoard_reset__P4101(s) {
+function GameBoard_reset__P50466(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -44205,49 +44207,49 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.word___7155 = undefined;
-    s.letter___7160 = undefined;
-    s.letterSprite___7165 = undefined;
+    s.word___50589 = undefined;
+    s.letter___50594 = undefined;
+    s.letterSprite___50599 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, GameBoard__C4095_VT)) failedCast(r0);
-    s.word___7155 = (0);
+    if (!checkSubtype(r0, GameBoard__C50462_VT)) failedCast(r0);
+    s.word___50589 = (0);
   case 1:
-    r0 = (s.word___7155 < 6);
+    r0 = (s.word___50589 < 6);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 4; continue; }
-    s.letter___7160 = (0);
+    s.letter___50594 = (0);
   case 2:
-    r0 = (s.letter___7160 < 5);
+    r0 = (s.letter___50594 < 5);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 3; continue; }
     r0 = s.arg0.fields["gameBoard"];
     s.tmp_2 = r0;
-    r0 = pxsim_Array__getAt(s.tmp_2, s.word___7155);
+    r0 = pxsim_Array__getAt(s.tmp_2, s.word___50589);
     s.tmp_1 = r0;
-    r0 = pxsim_Array__getAt(s.tmp_1, s.letter___7160);
-    s.letterSprite___7165 = (r0);
-    r0 = (s.letterSprite___7165).fields["text"] = (" ");
-    r0 = (s.letterSprite___7165).fields["bg"] = (0);
+    r0 = pxsim_Array__getAt(s.tmp_1, s.letter___50594);
+    s.letterSprite___50599 = (r0);
+    r0 = (s.letterSprite___50599).fields["text"] = (" ");
+    r0 = (s.letterSprite___50599).fields["bg"] = (0);
     s.tmp_0 = TextSprite_update__P3850_mk(s);
-    s.tmp_0.arg0 = s.letterSprite___7165;
+    s.tmp_0.arg0 = s.letterSprite___50599;
     s.callLocIdx = 119; s.pc = 5; return s.tmp_0;
   case 5:
     r0 = s.retval;
-    r0 = (s.letter___7160 + 1);
-    s.letter___7160 = (r0);
+    r0 = (s.letter___50594 + 1);
+    s.letter___50594 = (r0);
     { step = 2; continue; }
   case 3:
-    r0 = (s.word___7155 + 1);
-    s.word___7155 = (r0);
+    r0 = (s.word___50589 + 1);
+    s.word___50589 = (r0);
     { step = 1; continue; }
   case 4:
-    s.tmp_0 = GameBoard_showWordPrompt__P4103_mk(s);
+    s.tmp_0 = GameBoard_showWordPrompt__P50468_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.callLocIdx = 120; s.pc = 6; return s.tmp_0;
   case 6:
@@ -44256,19 +44258,19 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-GameBoard_reset__P4101.info = {"start":2174,"length":430,"line":69,"column":4,"endLine":79,"endColumn":5,"fileName":"board.ts","functionName":"reset","argumentNames":["this"]}
+GameBoard_reset__P50466.info = {"start":2639,"length":430,"line":76,"column":4,"endLine":86,"endColumn":5,"fileName":"board.ts","functionName":"reset","argumentNames":["this"]}
 
-function GameBoard_reset__P4101_mk(s) {
+function GameBoard_reset__P50466_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: GameBoard_reset__P4101, depth: s.depth + 1,
+        parent: s, fn: GameBoard_reset__P50466, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
-  word___7155: undefined,
-  letter___7160: undefined,
-  letterSprite___7165: undefined,
+  word___50589: undefined,
+  letter___50594: undefined,
+  letterSprite___50599: undefined,
   arg0: undefined,
 } }
 
@@ -44319,7 +44321,7 @@ function helpers_arrayPickRandom__P114_mk(s) {
 
 
 
-function MainGame_constructor__P4113(s) {
+function MainGame_constructor__P54256(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -44334,10 +44336,10 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, MainGame__C4104_VT)) failedCast(r0);
-    r0 = pxsim_pxtcore_mkClassInstance(GameBoard__C4095_VT);
+    if (!checkSubtype(r0, MainGame__C54249_VT)) failedCast(r0);
+    r0 = pxsim_pxtcore_mkClassInstance(GameBoard__C50462_VT);
     s.tmp_0 = r0;
-    s.tmp_1 = GameBoard_constructor__P4097_mk(s);
+    s.tmp_1 = GameBoard_constructor__P50475_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     s.callLocIdx = 148; s.pc = 1; return s.tmp_1;
   case 1:
@@ -44350,12 +44352,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-MainGame_constructor__P4113.info = {"start":402,"length":164,"line":18,"column":4,"endLine":23,"endColumn":5,"fileName":"game.ts","functionName":"inline","argumentNames":["this"]}
+MainGame_constructor__P54256.info = {"start":402,"length":164,"line":18,"column":4,"endLine":23,"endColumn":5,"fileName":"game.ts","functionName":"inline","argumentNames":["this"]}
 
-function MainGame_constructor__P4113_mk(s) {
+function MainGame_constructor__P54256_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: MainGame_constructor__P4113, depth: s.depth + 1,
+        parent: s, fn: MainGame_constructor__P54256, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -44366,7 +44368,7 @@ function MainGame_constructor__P4113_mk(s) {
 
 
 
-function GameBoard_constructor__P4097(s) {
+function GameBoard_constructor__P50475(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -44381,8 +44383,8 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, GameBoard__C4095_VT)) failedCast(r0);
-    s.tmp_0 = GameBoard_delete__P7042_mk(s);
+    if (!checkSubtype(r0, GameBoard__C50462_VT)) failedCast(r0);
+    s.tmp_0 = GameBoard_delete__P50472_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.callLocIdx = 107; s.pc = 1; return s.tmp_0;
   case 1:
@@ -44395,17 +44397,17 @@ switch (step) {
     r0 = pxsim_Array__mk();
     s.tmp_1 = r0;
     r0 = (s.tmp_0).fields["letterBoard"] = (s.tmp_1);
-    s.tmp_0 = GameBoard_createTitles__P7041_mk(s);
+    s.tmp_0 = GameBoard_createTitles__P50471_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.callLocIdx = 108; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
-    s.tmp_0 = GameBoard_createGameBoard__P7039_mk(s);
+    s.tmp_0 = GameBoard_createGameBoard__P50469_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.callLocIdx = 109; s.pc = 3; return s.tmp_0;
   case 3:
     r0 = s.retval;
-    s.tmp_0 = GameBoard_createLetterBoard__P7040_mk(s);
+    s.tmp_0 = GameBoard_createLetterBoard__P50470_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.callLocIdx = 110; s.pc = 4; return s.tmp_0;
   case 4:
@@ -44414,12 +44416,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-GameBoard_constructor__P4097.info = {"start":287,"length":201,"line":13,"column":4,"endLine":21,"endColumn":5,"fileName":"board.ts","functionName":"inline","argumentNames":["this"]}
+GameBoard_constructor__P50475.info = {"start":287,"length":201,"line":13,"column":4,"endLine":21,"endColumn":5,"fileName":"board.ts","functionName":"inline","argumentNames":["this"]}
 
-function GameBoard_constructor__P4097_mk(s) {
+function GameBoard_constructor__P50475_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: GameBoard_constructor__P4097, depth: s.depth + 1,
+        parent: s, fn: GameBoard_constructor__P50475, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -44430,7 +44432,7 @@ function GameBoard_constructor__P4097_mk(s) {
 
 
 
-function GameBoard_createLetterBoard__P7040(s) {
+function GameBoard_createLetterBoard__P50470(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -44440,19 +44442,19 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.x___7270 = undefined;
-    s.y___7271 = undefined;
-    s.lbHead___7272 = undefined;
-    s.i___7307 = undefined;
-    s.letterSprite___7319 = undefined;
+    s.x___50703 = undefined;
+    s.y___50704 = undefined;
+    s.lbHead___50705 = undefined;
+    s.i___50740 = undefined;
+    s.letterSprite___50752 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, GameBoard__C4095_VT)) failedCast(r0);
-    s.x___7270 = (140);
-    s.y___7271 = (20);
+    if (!checkSubtype(r0, GameBoard__C50462_VT)) failedCast(r0);
+    s.x___50703 = (140);
+    s.y___50704 = (20);
     r0 = pxsim_pxtcore_mkClassInstance(TextSprite__C3848_VT);
     s.tmp_0 = r0;
     s.tmp_1 = TextSprite_constructor__P3849_mk(s);
@@ -44470,29 +44472,29 @@ switch (step) {
     s.callLocIdx = 127; s.pc = 5; return s.tmp_1;
   case 5:
     r0 = s.retval;
-    s.lbHead___7272 = (s.tmp_0);
+    s.lbHead___50705 = (s.tmp_0);
     s.tmp_0 = Sprite_setKind__P2147_mk(s);
-    s.tmp_0.arg0 = s.lbHead___7272;
+    s.tmp_0.arg0 = s.lbHead___50705;
     s.tmp_0.arg1 = globals.Player___2207;
     s.callLocIdx = 128; s.pc = 6; return s.tmp_0;
   case 6:
     r0 = s.retval;
     s.tmp_0 = Sprite_setPosition__P2148_mk(s);
-    s.tmp_0.arg0 = s.lbHead___7272;
-    s.tmp_0.arg1 = s.x___7270;
-    s.tmp_0.arg2 = s.y___7271;
+    s.tmp_0.arg0 = s.lbHead___50705;
+    s.tmp_0.arg1 = s.x___50703;
+    s.tmp_0.arg2 = s.y___50704;
     s.callLocIdx = 129; s.pc = 7; return s.tmp_0;
   case 7:
     r0 = s.retval;
     s.tmp_0 = Sprite_setFlag__P2158_mk(s);
-    s.tmp_0.arg0 = s.lbHead___7272;
+    s.tmp_0.arg0 = s.lbHead___50705;
     s.tmp_0.arg1 = 7168;
     s.tmp_0.arg2 = true;
     s.callLocIdx = 130; s.pc = 8; return s.tmp_0;
   case 8:
     r0 = s.retval;
-    r0 = (s.y___7271 + 6);
-    s.y___7271 = (r0);
+    r0 = (s.y___50704 + 6);
+    s.y___50704 = (r0);
     r0 = pxsim_pxtcore_mkClassInstance(TextSprite__C3848_VT);
     s.tmp_0 = r0;
     s.tmp_1 = TextSprite_constructor__P3849_mk(s);
@@ -44510,43 +44512,43 @@ switch (step) {
     s.callLocIdx = 131; s.pc = 9; return s.tmp_1;
   case 9:
     r0 = s.retval;
-    s.lbHead___7272 = (s.tmp_0);
+    s.lbHead___50705 = (s.tmp_0);
     s.tmp_0 = Sprite_setKind__P2147_mk(s);
-    s.tmp_0.arg0 = s.lbHead___7272;
+    s.tmp_0.arg0 = s.lbHead___50705;
     s.tmp_0.arg1 = globals.Player___2207;
     s.callLocIdx = 132; s.pc = 10; return s.tmp_0;
   case 10:
     r0 = s.retval;
     s.tmp_0 = Sprite_setPosition__P2148_mk(s);
-    s.tmp_0.arg0 = s.lbHead___7272;
-    s.tmp_0.arg1 = s.x___7270;
-    s.tmp_0.arg2 = s.y___7271;
+    s.tmp_0.arg0 = s.lbHead___50705;
+    s.tmp_0.arg1 = s.x___50703;
+    s.tmp_0.arg2 = s.y___50704;
     s.callLocIdx = 133; s.pc = 11; return s.tmp_0;
   case 11:
     r0 = s.retval;
     s.tmp_0 = Sprite_setFlag__P2158_mk(s);
-    s.tmp_0.arg0 = s.lbHead___7272;
+    s.tmp_0.arg0 = s.lbHead___50705;
     s.tmp_0.arg1 = 7168;
     s.tmp_0.arg2 = true;
     s.callLocIdx = 134; s.pc = 12; return s.tmp_0;
   case 12:
     r0 = s.retval;
-    s.x___7270 = (126);
-    s.i___7307 = (0);
+    s.x___50703 = (126);
+    s.i___50740 = (0);
   case 1:
-    r0 = (s.i___7307 < 26);
+    r0 = (s.i___50740 < 26);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 4; continue; }
-    r0 = (s.i___7307 % 5);
+    r0 = (s.i___50740 % 5);
     s.tmp_2 = r0;
     r0 = (s.tmp_2 == 0);
     s.tmp_1 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_1);
     if (!r0) { step = 2; continue; }
-    s.x___7270 = (126);
-    r0 = (s.y___7271 + 7);
-    s.y___7271 = (r0);
+    s.x___50703 = (126);
+    r0 = (s.y___50704 + 7);
+    s.y___50704 = (r0);
   case 2:
   case 3:
     r0 = pxsim_pxtcore_mkClassInstance(TextSprite__C3848_VT);
@@ -44555,7 +44557,7 @@ switch (step) {
     s.tmp_1.arg0 = s.tmp_0;
     r0 = pxsim_String_.charCodeAt("A", 0);
     s.tmp_3 = r0;
-    r0 = (s.tmp_3 + s.i___7307);
+    r0 = (s.tmp_3 + s.i___50740);
     s.tmp_2 = r0;
     r0 = pxsim_String_.fromCharCode(s.tmp_2);
     s.tmp_1.arg1 = r0;
@@ -44571,22 +44573,22 @@ switch (step) {
     s.callLocIdx = 135; s.pc = 13; return s.tmp_1;
   case 13:
     r0 = s.retval;
-    s.letterSprite___7319 = (s.tmp_0);
+    s.letterSprite___50752 = (s.tmp_0);
     s.tmp_0 = Sprite_setKind__P2147_mk(s);
-    s.tmp_0.arg0 = s.letterSprite___7319;
+    s.tmp_0.arg0 = s.letterSprite___50752;
     s.tmp_0.arg1 = globals.Player___2207;
     s.callLocIdx = 136; s.pc = 14; return s.tmp_0;
   case 14:
     r0 = s.retval;
     s.tmp_0 = Sprite_setPosition__P2148_mk(s);
-    s.tmp_0.arg0 = s.letterSprite___7319;
-    s.tmp_0.arg1 = s.x___7270;
-    s.tmp_0.arg2 = s.y___7271;
+    s.tmp_0.arg0 = s.letterSprite___50752;
+    s.tmp_0.arg1 = s.x___50703;
+    s.tmp_0.arg2 = s.y___50704;
     s.callLocIdx = 137; s.pc = 15; return s.tmp_0;
   case 15:
     r0 = s.retval;
     s.tmp_0 = Sprite_setFlag__P2158_mk(s);
-    s.tmp_0.arg0 = s.letterSprite___7319;
+    s.tmp_0.arg0 = s.letterSprite___50752;
     s.tmp_0.arg1 = 7168;
     s.tmp_0.arg2 = true;
     s.callLocIdx = 138; s.pc = 16; return s.tmp_0;
@@ -44594,33 +44596,33 @@ switch (step) {
     r0 = s.retval;
     r0 = s.arg0.fields["letterBoard"];
     s.tmp_0 = r0;
-    r0 = pxsim_Array__push(s.tmp_0, s.letterSprite___7319);
-    r0 = (s.x___7270 + 7);
-    s.x___7270 = (r0);
-    r0 = (s.i___7307 + 1);
-    s.i___7307 = (r0);
+    r0 = pxsim_Array__push(s.tmp_0, s.letterSprite___50752);
+    r0 = (s.x___50703 + 7);
+    s.x___50703 = (r0);
+    r0 = (s.i___50740 + 1);
+    s.i___50740 = (r0);
     { step = 1; continue; }
   case 4:
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-GameBoard_createLetterBoard__P7040.info = {"start":3895,"length":1122,"line":115,"column":4,"endLine":146,"endColumn":5,"fileName":"board.ts","functionName":"createLetterBoard","argumentNames":["this"]}
+GameBoard_createLetterBoard__P50470.info = {"start":4360,"length":1122,"line":122,"column":4,"endLine":153,"endColumn":5,"fileName":"board.ts","functionName":"createLetterBoard","argumentNames":["this"]}
 
-function GameBoard_createLetterBoard__P7040_mk(s) {
+function GameBoard_createLetterBoard__P50470_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: GameBoard_createLetterBoard__P7040, depth: s.depth + 1,
+        parent: s, fn: GameBoard_createLetterBoard__P50470, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
   tmp_3: undefined,
-  x___7270: undefined,
-  y___7271: undefined,
-  lbHead___7272: undefined,
-  i___7307: undefined,
-  letterSprite___7319: undefined,
+  x___50703: undefined,
+  y___50704: undefined,
+  lbHead___50705: undefined,
+  i___50740: undefined,
+  letterSprite___50752: undefined,
   arg0: undefined,
 } }
 
@@ -44809,7 +44811,7 @@ function TextSprite_constructor__P3849_mk(s) {
 
 
 
-function GameBoard_createGameBoard__P7039(s) {
+function GameBoard_createGameBoard__P50469(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -44819,38 +44821,38 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.y___7193 = undefined;
-    s.x___7194 = undefined;
-    s.letterCode___7195 = undefined;
-    s.word___7198 = undefined;
-    s.wordSprites___7203 = undefined;
-    s.letter___7214 = undefined;
-    s.letterSprite___7219 = undefined;
+    s.y___50627 = undefined;
+    s.x___50628 = undefined;
+    s.letterCode___50629 = undefined;
+    s.word___50632 = undefined;
+    s.wordSprites___50637 = undefined;
+    s.letter___50648 = undefined;
+    s.letterSprite___50653 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, GameBoard__C4095_VT)) failedCast(r0);
-    s.y___7193 = (20);
-    s.x___7194 = (0);
+    if (!checkSubtype(r0, GameBoard__C50462_VT)) failedCast(r0);
+    s.y___50627 = (20);
+    s.x___50628 = (0);
     r0 = pxsim_String_.charCodeAt("A", 0);
-    s.letterCode___7195 = (r0);
-    s.word___7198 = (0);
+    s.letterCode___50629 = (r0);
+    s.word___50632 = (0);
   case 1:
-    r0 = (s.word___7198 < 6);
+    r0 = (s.word___50632 < 6);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 6; continue; }
     r0 = pxsim_Array__mk();
-    s.wordSprites___7203 = (r0);
+    s.wordSprites___50637 = (r0);
     r0 = (6 * 4);
     s.tmp_0 = r0;
     r0 = (80 - s.tmp_0);
-    s.x___7194 = (r0);
-    s.letter___7214 = (0);
+    s.x___50628 = (r0);
+    s.letter___50648 = (0);
   case 2:
-    r0 = (s.letter___7214 < 5);
+    r0 = (s.letter___50648 < 5);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 5; continue; }
@@ -44858,7 +44860,7 @@ switch (step) {
     s.tmp_1 = r0;
     s.tmp_2 = TextSprite_constructor__P3849_mk(s);
     s.tmp_2.arg0 = s.tmp_1;
-    r0 = pxsim_String_.fromCharCode(s.letterCode___7195);
+    r0 = pxsim_String_.fromCharCode(s.letterCode___50629);
     s.tmp_2.arg1 = r0;
     s.tmp_2.arg2 = 0;
     s.tmp_2.arg3 = 1;
@@ -44872,33 +44874,33 @@ switch (step) {
     s.callLocIdx = 123; s.pc = 7; return s.tmp_2;
   case 7:
     r0 = s.retval;
-    s.letterSprite___7219 = (s.tmp_1);
+    s.letterSprite___50653 = (s.tmp_1);
     s.tmp_0 = Sprite_setKind__P2147_mk(s);
-    s.tmp_0.arg0 = s.letterSprite___7219;
+    s.tmp_0.arg0 = s.letterSprite___50653;
     s.tmp_0.arg1 = globals.Player___2207;
     s.callLocIdx = 124; s.pc = 8; return s.tmp_0;
   case 8:
     r0 = s.retval;
     s.tmp_0 = Sprite_setPosition__P2148_mk(s);
-    s.tmp_0.arg0 = s.letterSprite___7219;
-    s.tmp_0.arg1 = s.x___7194;
-    s.tmp_0.arg2 = s.y___7193;
+    s.tmp_0.arg0 = s.letterSprite___50653;
+    s.tmp_0.arg1 = s.x___50628;
+    s.tmp_0.arg2 = s.y___50627;
     s.callLocIdx = 125; s.pc = 9; return s.tmp_0;
   case 9:
     r0 = s.retval;
     s.tmp_0 = Sprite_setFlag__P2158_mk(s);
-    s.tmp_0.arg0 = s.letterSprite___7219;
+    s.tmp_0.arg0 = s.letterSprite___50653;
     s.tmp_0.arg1 = 7168;
     s.tmp_0.arg2 = true;
     s.callLocIdx = 126; s.pc = 10; return s.tmp_0;
   case 10:
     r0 = s.retval;
-    r0 = pxsim_Array__push(s.wordSprites___7203, s.letterSprite___7219);
-    r0 = (s.x___7194 + 12);
-    s.x___7194 = (r0);
-    r0 = (s.letterCode___7195 + 1);
-    s.letterCode___7195 = (r0);
-    s.tmp_1 = r0 = s.letterCode___7195;
+    r0 = pxsim_Array__push(s.wordSprites___50637, s.letterSprite___50653);
+    r0 = (s.x___50628 + 12);
+    s.x___50628 = (r0);
+    r0 = (s.letterCode___50629 + 1);
+    s.letterCode___50629 = (r0);
+    s.tmp_1 = r0 = s.letterCode___50629;
     r0 = pxsim_String_.charCodeAt("Z", 0);
     s.tmp_2 = r0;
     r0 = (s.tmp_1 > s.tmp_2);
@@ -44906,43 +44908,43 @@ switch (step) {
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 3; continue; }
     r0 = pxsim_String_.charCodeAt("A", 0);
-    s.letterCode___7195 = (r0);
+    s.letterCode___50629 = (r0);
   case 3:
   case 4:
-    r0 = (s.letter___7214 + 1);
-    s.letter___7214 = (r0);
+    r0 = (s.letter___50648 + 1);
+    s.letter___50648 = (r0);
     { step = 2; continue; }
   case 5:
     r0 = s.arg0.fields["gameBoard"];
     s.tmp_0 = r0;
-    r0 = pxsim_Array__push(s.tmp_0, s.wordSprites___7203);
-    r0 = (s.y___7193 + 14);
-    s.y___7193 = (r0);
-    r0 = (s.word___7198 + 1);
-    s.word___7198 = (r0);
+    r0 = pxsim_Array__push(s.tmp_0, s.wordSprites___50637);
+    r0 = (s.y___50627 + 14);
+    s.y___50627 = (r0);
+    r0 = (s.word___50632 + 1);
+    s.word___50632 = (r0);
     { step = 1; continue; }
   case 6:
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-GameBoard_createGameBoard__P7039.info = {"start":2824,"length":1065,"line":89,"column":4,"endLine":113,"endColumn":5,"fileName":"board.ts","functionName":"createGameBoard","argumentNames":["this"]}
+GameBoard_createGameBoard__P50469.info = {"start":3289,"length":1065,"line":96,"column":4,"endLine":120,"endColumn":5,"fileName":"board.ts","functionName":"createGameBoard","argumentNames":["this"]}
 
-function GameBoard_createGameBoard__P7039_mk(s) {
+function GameBoard_createGameBoard__P50469_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: GameBoard_createGameBoard__P7039, depth: s.depth + 1,
+        parent: s, fn: GameBoard_createGameBoard__P50469, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
-  y___7193: undefined,
-  x___7194: undefined,
-  letterCode___7195: undefined,
-  word___7198: undefined,
-  wordSprites___7203: undefined,
-  letter___7214: undefined,
-  letterSprite___7219: undefined,
+  y___50627: undefined,
+  x___50628: undefined,
+  letterCode___50629: undefined,
+  word___50632: undefined,
+  wordSprites___50637: undefined,
+  letter___50648: undefined,
+  letterSprite___50653: undefined,
   arg0: undefined,
 } }
 
@@ -44950,7 +44952,7 @@ function GameBoard_createGameBoard__P7039_mk(s) {
 
 
 
-function GameBoard_createTitles__P7041(s) {
+function GameBoard_createTitles__P50471(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -44965,7 +44967,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, GameBoard__C4095_VT)) failedCast(r0);
+    if (!checkSubtype(r0, GameBoard__C50462_VT)) failedCast(r0);
     r0 = pxsim_pxtcore_mkClassInstance(TextSprite__C3848_VT);
     s.tmp_0 = r0;
     s.tmp_1 = TextSprite_constructor__P3849_mk(s);
@@ -45056,12 +45058,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-GameBoard_createTitles__P7041.info = {"start":5023,"length":609,"line":148,"column":4,"endLine":161,"endColumn":5,"fileName":"board.ts","functionName":"createTitles","argumentNames":["this"]}
+GameBoard_createTitles__P50471.info = {"start":5488,"length":609,"line":155,"column":4,"endLine":168,"endColumn":5,"fileName":"board.ts","functionName":"createTitles","argumentNames":["this"]}
 
-function GameBoard_createTitles__P7041_mk(s) {
+function GameBoard_createTitles__P50471_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: GameBoard_createTitles__P7041, depth: s.depth + 1,
+        parent: s, fn: GameBoard_createTitles__P50471, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -45072,7 +45074,7 @@ function GameBoard_createTitles__P7041_mk(s) {
 
 
 
-function GameBoard_delete__P7042(s) {
+function GameBoard_delete__P50472(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -45082,60 +45084,60 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.oldSprite___7388 = undefined;
-    s.unnamed164___U1 = undefined;
-    s.unnamed165___U2 = undefined;
+    s.oldSprite___50821 = undefined;
+    s.unnamed636___U1 = undefined;
+    s.unnamed637___U2 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, GameBoard__C4095_VT)) failedCast(r0);
-    s.oldSprite___7388 = (undefined);
+    if (!checkSubtype(r0, GameBoard__C50462_VT)) failedCast(r0);
+    s.oldSprite___50821 = (undefined);
     s.tmp_0 = sprites_allOfKind__P2045_mk(s);
     s.tmp_0.arg0 = globals.Text___3847;
     s.callLocIdx = 146; s.pc = 3; return s.tmp_0;
   case 3:
     r0 = s.retval;
-    s.unnamed164___U1 = (r0);
-    s.unnamed165___U2 = (0);
+    s.unnamed636___U1 = (r0);
+    s.unnamed637___U2 = (0);
   case 1:
-    s.tmp_0 = r0 = s.unnamed165___U2;
-    r0 = pxsim_Array__length(s.unnamed164___U1);
+    s.tmp_0 = r0 = s.unnamed637___U2;
+    r0 = pxsim_Array__length(s.unnamed636___U1);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 2; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed164___U1, s.unnamed165___U2);
-    s.oldSprite___7388 = (r0);
+    r0 = pxsim_Array__getAt(s.unnamed636___U1, s.unnamed637___U2);
+    s.oldSprite___50821 = (r0);
     s.tmp_2 = Sprite_destroy__P2166_mk(s);
-    s.tmp_2.arg0 = s.oldSprite___7388;
+    s.tmp_2.arg0 = s.oldSprite___50821;
     s.tmp_2.arg1 = undefined;
     s.tmp_2.arg2 = undefined;
     s.callLocIdx = 147; s.pc = 4; return s.tmp_2;
   case 4:
     r0 = s.retval;
-    r0 = (s.unnamed165___U2 + 1);
-    s.unnamed165___U2 = (r0);
+    r0 = (s.unnamed637___U2 + 1);
+    s.unnamed637___U2 = (r0);
     { step = 1; continue; }
   case 2:
-    s.unnamed164___U1 = (undefined);
+    s.unnamed636___U1 = (undefined);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-GameBoard_delete__P7042.info = {"start":5638,"length":167,"line":163,"column":4,"endLine":168,"endColumn":5,"fileName":"board.ts","functionName":"delete","argumentNames":["this"]}
+GameBoard_delete__P50472.info = {"start":6103,"length":167,"line":170,"column":4,"endLine":175,"endColumn":5,"fileName":"board.ts","functionName":"delete","argumentNames":["this"]}
 
-function GameBoard_delete__P7042_mk(s) {
+function GameBoard_delete__P50472_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: GameBoard_delete__P7042, depth: s.depth + 1,
+        parent: s, fn: GameBoard_delete__P50472, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
-  oldSprite___7388: undefined,
-  unnamed164___U1: undefined,
-  unnamed165___U2: undefined,
+  oldSprite___50821: undefined,
+  unnamed636___U1: undefined,
+  unnamed637___U2: undefined,
   arg0: undefined,
 } }
 
@@ -65850,7 +65852,7 @@ const Stats__C4083_VT = mkVTable({
     "show": Stats_show__P4094,
   },
 });
-const MainGame__C4104_VT = mkVTable({
+const MainGame__C54249_VT = mkVTable({
   name: "MainGame",
   numFields: 8,
   classNo: 20,
@@ -65875,13 +65877,13 @@ const MainGame__C4104_VT = mkVTable({
     "set/lastRevealed": null,
     "puzzleWord": null,
     "set/puzzleWord": null,
-    "findInDictionary": MainGame_findInDictionary__P4114,
-    "getGuess": MainGame_getGuess__P4115,
-    "getPuzzle": MainGame_getPuzzle__P4116,
-    "revealNext": MainGame_revealNext__P4117,
-    "revealPuzzle": MainGame_revealPuzzle__P4118,
-    "startRound": MainGame_startRound__P4119,
-    "validateInput": MainGame_validateInput__P7396,
+    "findInDictionary": MainGame_findInDictionary__P54250,
+    "getGuess": MainGame_getGuess__P54251,
+    "getPuzzle": MainGame_getPuzzle__P54252,
+    "revealNext": MainGame_revealNext__P54253,
+    "revealPuzzle": MainGame_revealPuzzle__P54170,
+    "startRound": MainGame_startRound__P54254,
+    "validateInput": MainGame_validateInput__P54255,
   },
 });
 const RotatingScreens__C3926_VT = mkVTable({
@@ -65940,7 +65942,7 @@ const RotatingScreens__C3926_VT = mkVTable({
     "printMultipleCenter": RotatingScreens_printMultipleCenter__P6605,
   },
 });
-const GameBoard__C4095_VT = mkVTable({
+const GameBoard__C50462_VT = mkVTable({
   name: "GameBoard",
   numFields: 5,
   classNo: 23,
@@ -65959,16 +65961,16 @@ const GameBoard__C4095_VT = mkVTable({
     "set/promptSprite": null,
     "titleSprite": null,
     "set/titleSprite": null,
-    "hideGiveUpPrompt": GameBoard_hideGiveUpPrompt__P4098,
-    "hideWordPrompt": GameBoard_hideWordPrompt__P4099,
-    "reveal": GameBoard_reveal__P4100,
-    "reset": GameBoard_reset__P4101,
-    "showGiveUpPrompt": GameBoard_showGiveUpPrompt__P4102,
-    "showWordPrompt": GameBoard_showWordPrompt__P4103,
-    "createGameBoard": GameBoard_createGameBoard__P7039,
-    "createLetterBoard": GameBoard_createLetterBoard__P7040,
-    "createTitles": GameBoard_createTitles__P7041,
-    "delete": GameBoard_delete__P7042,
+    "hideGiveUpPrompt": GameBoard_hideGiveUpPrompt__P50463,
+    "hideWordPrompt": GameBoard_hideWordPrompt__P50464,
+    "reveal": GameBoard_reveal__P50465,
+    "reset": GameBoard_reset__P50466,
+    "showGiveUpPrompt": GameBoard_showGiveUpPrompt__P50467,
+    "showWordPrompt": GameBoard_showWordPrompt__P50468,
+    "createGameBoard": GameBoard_createGameBoard__P50469,
+    "createLetterBoard": GameBoard_createLetterBoard__P50470,
+    "createTitles": GameBoard_createTitles__P50471,
+    "delete": GameBoard_delete__P50472,
   },
 });
 const music_Melody__C1610_VT = mkVTable({
@@ -67751,7 +67753,7 @@ const sprites_BaseSpriteSayRenderer__C2028_VT = mkVTable({
   },
 });
 
-const breakpoints = setupDebugger(1, ["g_gameMode___4050","g_game___4030","g_stats___4031","g_splashScreen___4051","TEXT_TITLES___4049","TEXT_HEADLINES___4047","TEXT_ACTIONS___4048","WORDS___25313"])
+const breakpoints = setupDebugger(1, ["g_gameMode___4050","g_game___4030","g_stats___4031","g_splashScreen___4051","TEXT_TITLES___4049","TEXT_HEADLINES___4047","TEXT_ACTIONS___4048","WORDS___4037"])
 
-return _main___P25988
+return _main___P55034
 })
