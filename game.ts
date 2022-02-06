@@ -77,7 +77,7 @@ class MainGame {
         return this.puzzleWord
     }
 
-    public revealNext(): void {
+    public revealNext(): MatchStatus {
         this.lastRevealed++
         let row: number = this.guessCount - 1
         if (this.guessCount > MainGame.MAX_GUESSES) {
@@ -90,6 +90,7 @@ class MainGame {
         if (this.lastRevealed >= MainGame.WORD_LENGTH - 1) {
             this.revealFinished = true
         }
+        return this.guess.matches[this.lastRevealed]
     }
 
     public revealPuzzle(): void {

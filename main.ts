@@ -52,7 +52,7 @@ game.onUpdate(function () {
         case GameMode.ShowGuess:
             if (game.runtime() >= g_game.nextReveal) {
                 if (! g_game.revealFinished) {
-                    g_game.revealNext()
+                    revealNextLetter()
                 } else {
                     startNextGuess()
                 }
@@ -87,6 +87,23 @@ function getGuess(): void {
         startNextGuess()
     } else {
         g_gameMode = GameMode.ShowGuess
+    }
+}
+
+function revealNextLetter(): void {
+    let status: MatchStatus = g_game.revealNext()
+    switch (status) {
+        case MatchStatus.Match:
+            music.baDing.play()
+            break
+        
+        case MatchStatus.WrongPlace:
+            music.smallCrash.play()
+            break
+
+        default:
+            music.thump.play()
+            break
     }
 }
 

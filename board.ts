@@ -37,7 +37,6 @@ class GameBoard {
         let letterBoardSprite: TextSprite = this.letterBoard[charIndex]
         switch (status) {
             case MatchStatus.Match:
-                music.baDing.play()
                 letterSprite.bg = Color.BrightGreen
                 letterSprite.fg = Color.White
                 letterBoardSprite.bg = Color.BrightGreen
@@ -47,7 +46,6 @@ class GameBoard {
                 break
 
             case MatchStatus.WrongPlace:
-                music.smallCrash.play()
                 letterSprite.bg = Color.Yellow
                 letterSprite.fg = Color.Black
                 if (letterBoardSprite.bg == 0) {
@@ -59,7 +57,6 @@ class GameBoard {
                 break
 
             default:
-                music.knock.play()
                 letterSprite.bg = Color.Black
                 letterSprite.fg = Color.White
                 // For a guess like GAUGE, if the second G matches
