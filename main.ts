@@ -86,6 +86,9 @@ function getGuess(): void {
     if (g_game.resetRequested) {
         startNextGuess()
     } else {
+        // Kludge for GitHub pages version
+        // Need to play something to warm up the sound queue
+        music.beamUp.playUntilDone()
         g_gameMode = GameMode.ShowGuess
     }
 }
