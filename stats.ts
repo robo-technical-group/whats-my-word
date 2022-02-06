@@ -47,7 +47,7 @@ class Stats {
         settings.writeNumberArray("guesses", this.guesses)
     }
 
-    public show(): void {
+    public show(guesses: number = 0): void {
         let message: string =
             "Wins: " + this.wins + "\n"
             + "Win streak: " + this.streak + "\n"
@@ -58,7 +58,8 @@ class Stats {
                 + "Guesses:\n"
             for (let i: number = 0; i < MainGame.MAX_GUESSES; i++) {
                 message += (i + 1) + ": " + this.guesses[i]
-                    + "(" + Math.round(this.guesses[i] / this.games * 100) + "%)\n"
+                    + "(" + Math.round(this.guesses[i] / this.games * 100).toString() + "%)"
+                    + (guesses == i + 1 ? " <--\n" : "\n")
             }
         }
         game.showLongText(message, DialogLayout.Full)

@@ -71,7 +71,7 @@ function endGame(win: boolean) {
         game.splash(g_game.getPuzzle() + "!",
         "Got it in " + g_game.guessCount +
             (g_game.guessCount == 1 ? " guess!!" : " guesses!"))
-        g_stats.show()
+        g_stats.show(g_game.guessCount)
         game.over(true, effects.confetti)
     } else {
         g_stats.addLoss()
