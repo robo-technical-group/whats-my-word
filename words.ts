@@ -1143,7 +1143,6 @@ const WORDS: string[] = [
     "WAITS",
     "CHALK",
     "CAVES",
-    "SENOR",
     "INFER",
     "TRAIT",
     "TASKS",
