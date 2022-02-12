@@ -3,7 +3,7 @@
  * a.k.a. Wordle for MakeCode Arcade
  * https://www.powerlanguage.co.uk/wordle/
  * Built on
- * MakeCode Arcade JavaScript Template v. 3.0.0
+ * MakeCode Arcade JavaScript Template v. 3.0.1
  * Template last update: 04 Feb 2022 ak
  */
 
@@ -21,19 +21,6 @@ let g_stats: Stats = null
  * Main() a.k.a. game.onStart()
  */
 startAttractMode()
-
-/**
- * Start game modes
- */
-function startGame(): void {
-    g_gameMode = GameMode.NotReady
-    g_splashScreen.release()
-    scene.setBackgroundImage(assets.image`bg`)
-    g_stats = new Stats()
-    g_game = new MainGame()
-    g_game.startRound()
-    g_gameMode = GameMode.Main
-}   // startGame()
 
 /**
  * Game loops
@@ -61,6 +48,18 @@ game.onUpdate(function () {
     }   // switch (g_gameMode)
 })  // game.onUpdate()
 
+/**
+ * Start game modes
+ */
+function startGame(): void {
+    g_gameMode = GameMode.NotReady
+    g_splashScreen.release()
+    scene.setBackgroundImage(assets.image`bg`)
+    g_stats = new Stats()
+    g_game = new MainGame()
+    g_game.startRound()
+    g_gameMode = GameMode.Main
+}   // startGame()
 
 /**
  * Other functions
