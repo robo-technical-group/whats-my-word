@@ -24,14 +24,7 @@ class MainGame {
     }
 
     public findInDictionary(needle: string): boolean {
-        // Linear search because WORDS is unsorted. :-(
-        needle = needle.toUpperCase()
-        for (let word of WORDS) {
-            if (needle == word) {
-                return true
-            }
-        }
-        return false
+        return WordLists.GameWords2020.findWord(needle.toUpperCase())
     }
 
     public getGuess(): void {
